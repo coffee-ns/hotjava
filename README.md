@@ -132,7 +132,7 @@ IVehicleDAO, VehicleDAO, VehicleDAOStub - handles data retrieval and storage for
 
 **UI Specialist**: Mason Mickelini / Brandon Zachary
 
-**Business Logic and Persistence Specialist**: Michael Mcquade
+**Business Logic and Persistence Specialist**: Michael Mcquade / Alexander Pugh
 
 **Product Owner/Scrum Master/DevOps/GitHub Administrator**: Nathan Coffee
 

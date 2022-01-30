@@ -91,6 +91,9 @@ Then: The page will then refresh presenting a new vehicle for polling
 >			}, 
 >			“vehicleModel” : {
 >				“type” : “string”
+>			}, 
+>			“vehicleScore” : {
+>				“type” : “integer”
 >			}
 >		}
 >	} 

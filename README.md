@@ -126,7 +126,7 @@ IVehicleService, VehicleService, VehicleServiceStub - handles sending informatio
 
 ### com.hotjava.dao
 
-IVehicleDAO, VehicleDAO, VehicleDAOStub - handles data retrieval and storage for the application
+IVehicleDAO, VehicleDAO - handles data retrieval and storage for the application
 
 ## Team Members & Roles
 

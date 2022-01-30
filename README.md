@@ -6,8 +6,7 @@ Submission will not be required to vote, but registration will be a necessary st
 
 ## Storyboard
 
-![image](![image]https://user-images.githubusercontent.com/77906864/151719829-0c550a46-f6d4-4365-be51-e44a7eaa95b6.png)
-
+![image](https://user-images.githubusercontent.com/77906864/151719857-563a3985-0a87-4025-9ed9-d33cfc026fad.png)
 
 
 ## Requirements

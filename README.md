@@ -99,7 +99,7 @@ Then: The page will then refresh presenting a new vehicle for polling
 
 ## Class Diagram
 
-![image](ADD CLASS DIAGRAM)
+![image](https://user-images.githubusercontent.com/70348037/151722658-a12fff0e-7a27-46ec-8d4c-0aab09fb7e23.jpg)
 
 ## Class Descriptions
 

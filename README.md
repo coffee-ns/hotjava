@@ -1,13 +1,4 @@
 # Hot Java
-Cars &amp; Coffee with a twist
-
-
-https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZGM4NjIwYTYtYmQzYi00OWUzLWIxYmUtODFhZGMwZjMyYzNj%40thread.v2/0?context=%7b%22Tid%22%3a%22f5222e6c-5fc6-48eb-8f03-73db18203b63%22%2c%22Oid%22%3a%22f763efca-3726-4129-8023-2d5dda742031%22%7d
-
-
-
-
-# Hot Java
 
 Introduction – Hot Java is an application that lets users submit photos and descriptions of their car to be funneled into a voting form. Users will be able to vote on cars and builds which will raise and lower their ranks among their peers. Users will be able to search for and view the top cars in specified categories such as make and model.
 

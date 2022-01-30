@@ -6,7 +6,7 @@ Submission will not be required to vote, but registration will be a necessary st
 
 ## Storyboard
 
-![image](ADD STORYBOARD)
+![image](![image]https://user-images.githubusercontent.com/77906864/151719829-0c550a46-f6d4-4365-be51-e44a7eaa95b6.png)
 
 
 

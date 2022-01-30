@@ -115,12 +115,12 @@ LookupVehicle - Collects vehicle name to find objects with the given name.
 CreateVehicleSubmission - Handles information given from the user to create a vehicle submission & entry.
 
 
-### com.vehicle.dto
+### com.hotjava.dto
 
 vehicle - Basic Object class to store information for vehicles.
 
 
-### com.vehicle.service
+### com.hotjava.service
 
 IVehicleService, VehicleService, VehicleServiceStub - handles sending information from the UI to the database
 

@@ -31,20 +31,20 @@ public class VehicleService implements IVehicleService {
 
     public VehicleService(IVehicleDAO vehicleDAO) {
 
-        this.vehiclenDAO = vehicleDAO;
+        this.vehicleDAO = vehicleDAO;
     }
 
     @Override
     @Cacheable(value="vehicle", key="#id")
     public Vehicle fetchById(int id) {
         Vehicle foundVehicle = vehicleDAO.fetch(id);
-        return foundSpecimen;
+       return foundVehicle;
     }
 
     @Override
     @CacheEvict(value="vehicle", key="#id")
     public void delete(int id) throws Exception {
-        vehicleDAO.delete(id);
+        //vehicleDAO.delete(id);
     }
 
     @Override
@@ -60,8 +60,9 @@ public class VehicleService implements IVehicleService {
 
     @Override
     @Cacheable("vehicles")
-    public List<Vehicle> fetchVehicles(String name) throws IOException {
-        return vehicleDAO.fetchVehicles(name);
+    public List<Vehicle> fetchVehicles(String name) {
+        return vehicleDAO.fetchAll();
+        //TODO change to get filtered vehicles
     }
 
     @Override
@@ -69,5 +70,7 @@ public class VehicleService implements IVehicleService {
         photoDAO.save(photo);
         photoDAO.saveImage(imageFile, photo);
     }
+
+
 
 }

@@ -1,5 +1,6 @@
 package com.hotjava.app.hotjava.dao;
 
+
 import com.hotjava.app.hotjava.dto.Vehicle;
 
 import java.util.List;

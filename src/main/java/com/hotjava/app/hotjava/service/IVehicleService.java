@@ -1,5 +1,9 @@
 package com.hotjava.app.hotjava.service;
 
+import com.hotjava.app.hotjava.dto.Photo;
+import com.hotjava.app.hotjava.dto.Vehicle;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -9,7 +13,7 @@ public interface IVehicleService {
      * @param id a unique identifier for a vehicle.
      * @return the matching vehicle, or null if no matches found.
      */
-    fetchById(int id);
+    Vehicle fetchById(int id);
 
     /**
      * delete a vehicle with a given ID.
@@ -27,7 +31,7 @@ public interface IVehicleService {
 
     /**
      * returns all Vehicles.
-     * @param none.
+     * @param
      * @return a List of Vehicles.
      */
     List<Vehicle> fetchAll();
@@ -46,6 +50,7 @@ public interface IVehicleService {
      * @param photo Photo object with associated data
      * @return a List of Vehicles with name matching combined name param.
      */
-    void saveImage(MultipartFile imageFile, Photo photo) throws IOException;
+
+     void saveImage(MultipartFile imageFile, Photo photo) throws IOException;
 
 }

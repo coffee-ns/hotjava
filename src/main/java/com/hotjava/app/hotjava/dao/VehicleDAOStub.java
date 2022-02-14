@@ -17,7 +17,7 @@ public class VehicleDAOStub implements IVehicleDAO {
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-        allVehicles.put(vehicle.getVehicleId(), vehicle);
+        allVehicles.put(vehicle.getVehicleSubmissionID(), vehicle);
         return vehicle;
     }
 

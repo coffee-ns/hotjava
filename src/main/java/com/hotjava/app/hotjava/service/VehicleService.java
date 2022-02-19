@@ -14,10 +14,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class VehicleService implements IVehicleService {
+
+    private ArrayList<Vehicle> vehicleArrayForTests; //Temporary list until dao setup
 
     @Autowired
     private IVehicleDAO vehicleDAO;

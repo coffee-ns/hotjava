@@ -23,10 +23,40 @@ public class HotJavaController {
      * Handle the / endpoint
      * @return
      */
+
     @RequestMapping("/")
     public String index() {
         return "start";
     }
 
+    /**
+     * Handle the /post endpoint
+     * @return
+     */
+
+    @RequestMapping("/")
+    public String post() {
+        return "post";
+    }
+
+    /**
+     * Handle the /browse endpoint
+     * @return
+     */
+
+    @RequestMapping("/")
+    public String browse() {
+        return "browse";
+    }
+
+    /**
+     * Handle the /search endpoint
+     * @return
+     */
+
+    @RequestMapping("/")
+    public String search() {
+        return "search";
+    }
 
 }

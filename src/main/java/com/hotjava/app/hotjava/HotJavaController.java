@@ -25,7 +25,7 @@ public class HotJavaController {
      */
     @RequestMapping("/")
     public String index() {
-        return "start";
+        return "index";
     }
 
 

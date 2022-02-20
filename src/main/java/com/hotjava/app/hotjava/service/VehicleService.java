@@ -52,7 +52,13 @@ public class VehicleService implements IVehicleService {
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-        return vehicleDAO.save(vehicle);
+
+        if(vehicleIsComplete(vehicle) ){
+            return vehicleDAO.save(vehicle);
+        }
+
+        //TODO set rejection message and return vehicle
+        return vehicle;
     }
 
     @Override
@@ -74,6 +80,42 @@ public class VehicleService implements IVehicleService {
         photoDAO.saveImage(imageFile, photo);
     }
 
+    /**
+     * Returns a boolean value indicating whether any of the vehicles attributes are null or default.
+     * Additionally, checks the attributes of the photo object attached to the vehicle for any ull or default attributes
+     * (Photo comments allowed to be null or empty for now).
+     * @param  vehicle   the vehicle object passed in for its attributes to be evaluated
+     * @return boolean value for if the vehicle's is considered to be completely filled out
+     */
+    private boolean vehicleIsComplete(Vehicle vehicle) {
+        if(vehicle.getVehicleSubmissionID() == 0){
+            return false;
+        }
+        if(vehicle.getVehicleMake().equals(null) || vehicle.getVehicleMake().isEmpty()){
+            return false;
+        }
+        if(vehicle.getVehicleModel().equals(null) || vehicle.getVehicleModel().isEmpty()){
+            return false;
+        }
+        if(vehicle.getVehicleScore().equals(null) || vehicle.getVehicleScore().isEmpty()){
+            return false;
+        }
+        if(vehicle.getVehicleYear().equals(null) || vehicle.getVehicleYear().isEmpty()){
+            return false;
+        }
+        if(vehicle.getVehicleDescription().equals(null) || vehicle.getVehicleDescription().isEmpty()){
+            return false;
+        }
+        if(vehicle.getVehicleOwnerName().equals(null) || vehicle.getVehicleOwnerName().isEmpty()){
+            return false;
+        }
+        Photo vehiclesPhoto = vehicle.getPhoto();
+        if(vehiclesPhoto.getPhotoId() == 0
+                || vehiclesPhoto.getPath().equals(null) ||vehiclesPhoto.getPath().isEmpty()
+                || vehiclesPhoto.getFileName().equals(null) || vehiclesPhoto.getFileName().isEmpty() ){
+            return false;
+        }
 
-
+        return true;
+    }
 }

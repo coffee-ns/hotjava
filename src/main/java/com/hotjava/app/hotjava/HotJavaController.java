@@ -28,24 +28,5 @@ public class HotJavaController {
         return "index";
     }
 
-    /**
-     * Handle the /vote endpoint
-     * @return status code 200
-     */
-    @GetMapping("/vote")
-    public ResponseEntity getAllVehicles() {
-        return new ResponseEntity(HttpStatus.OK);
-    }
-
-    /**
-     *
-     * Handle the /addVehicle endpoint
-     * @return vehicle
-     */
-    @PostMapping(value = "/addVehicle", consumes = "application/json", produces = "application/json")
-    public Vehicle addVehicle(@RequestBody Vehicle vehicle){
-        return vehicle;
-    }
-
 
 }

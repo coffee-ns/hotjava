@@ -1,7 +1,6 @@
 package com.hotjava.app.hotjava.dao;
 
 import com.hotjava.app.hotjava.dto.Vehicle;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -23,8 +22,7 @@ public class VehicleDAOStub implements IVehicleDAO {
 
     @Override
     public List<Vehicle> fetchAll() {
-        List<Vehicle> returnVehicles = new ArrayList(allVehicles.values());
-        return returnVehicles;
+        return (List<Vehicle>) new ArrayList(allVehicles.values());
     }
 
     @Override

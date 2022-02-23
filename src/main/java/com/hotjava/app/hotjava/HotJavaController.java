@@ -1,10 +1,10 @@
 package com.hotjava.app.hotjava;
 
+import com.hotjava.app.hotjava.dto.Vehicle;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
+import org.springframework.web.bind.annotation.*;
 
 
 /**
@@ -21,7 +21,7 @@ public class HotJavaController {
 
     /**
      * Handle the / endpoint
-     * @return
+     * @return index
      */
     @RequestMapping("/")
     public String index() {

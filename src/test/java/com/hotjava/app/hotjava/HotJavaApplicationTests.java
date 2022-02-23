@@ -76,26 +76,20 @@ class HotJavaApplicationTests {
 	 */
 	@Test
 	void verifyServiceCanAddVehicles() throws Exception{
-		int vehicleSubmissionID = 8675309;
-		String vehicleOwnerName = "test name";
-		String vehicleDescription ="test desc";
-		String vehicleYear = "1999";
-		String vehicleMake = "test make";
-		String vehicleModel = "test model";
-		String vehicleScore = "test score";
+
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
 
 		Vehicle testVehicle = new Vehicle();
-		testVehicle.setVehicleSubmissionID(vehicleSubmissionID);
-		testVehicle.setVehicleOwnerName(vehicleOwnerName);
-		testVehicle.setVehicleDescription(vehicleDescription);
-		testVehicle.setVehicleYear(vehicleYear);
-		testVehicle.setVehicleMake(vehicleMake);
-		testVehicle.setVehicleModel(vehicleModel);
-		testVehicle.setVehicleScore(vehicleScore);
+		testVehicle.setVehicleSubmissionID(8675309);
+		testVehicle.setVehicleOwnerName("test name");
+		testVehicle.setVehicleDescription("test desc");
+		testVehicle.setVehicleYear("1999");
+		testVehicle.setVehicleMake("test make");
+		testVehicle.setVehicleModel("test model");
+		testVehicle.setVehicleScore("test score");
 		testVehicle.setPhoto(vehiclePhoto);
 
 		vehicleServiceNoMock.save(testVehicle);
@@ -104,13 +98,14 @@ class HotJavaApplicationTests {
 
 		Boolean vehiclePresent = false;
 		for (Vehicle v: vehicleList) {
-			if(v.getVehicleSubmissionID() == vehicleSubmissionID){
+			if(v.getVehicleSubmissionID() == testVehicle.getVehicleSubmissionID()){
 				if(v == testVehicle){
 					vehiclePresent = true;
 				}
 			}
 		}
         assertTrue(vehiclePresent);
+
 	}
 
 	/**

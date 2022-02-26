@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-
 public class VehicleDAOStub implements IVehicleDAO {
 
     Map<Integer, Vehicle> allVehicles = new HashMap<>();
@@ -37,5 +36,4 @@ public class VehicleDAOStub implements IVehicleDAO {
         allVehicles.remove(id);
 
     }
-
 }

@@ -33,7 +33,6 @@ public class VehicleService implements IVehicleService {
     }
 
     public VehicleService(IVehicleDAO vehicleDAO) {
-
         this.vehicleDAO = vehicleDAO;
     }
 
@@ -41,7 +40,7 @@ public class VehicleService implements IVehicleService {
     @Cacheable(value="vehicle", key="#id")
     public Vehicle fetchById(int id) {
         Vehicle foundVehicle = vehicleDAO.fetch(id);
-       return foundVehicle;
+        return foundVehicle;
     }
 
     @Override

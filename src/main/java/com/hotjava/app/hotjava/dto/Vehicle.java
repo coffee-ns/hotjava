@@ -4,13 +4,12 @@ import lombok.Data;
 
 public @Data
 class Vehicle {
-    private int vehicleSubmissionID;
-    private String vehicleOwnerName;
-    private String vehicleDescription;
-    private String vehicleYear;
-    private String vehicleMake;
-    private String vehicleModel;
-    private String vehicleScore;
-
+    private int SubmissionID;
+    private String OwnerName;
+    private String Description;
+    private String Year;
+    private String Make;
+    private String Model;
+    private String Score;
     private Photo photo;
 }

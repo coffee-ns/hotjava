@@ -40,21 +40,30 @@ public class VehicleService implements IVehicleService {
     @Override
     @Cacheable(value="vehicle", key="#id")
     public Vehicle fetchById(int id) {
-        Vehicle foundVehicle = vehicleDAO.fetch(id);
-       return foundVehicle;
+       return vehicleDAO.fetch(id);
     }
 
     @Override
     @CacheEvict(value="vehicle", key="#id")
     public void delete(int id) throws Exception {
-        //vehicleDAO.delete(id);
+        try{
+            //vehicleDAO.delete(id);
+        }
+        catch (Exception e) {
+            //TODO add exception handling
+        }
     }
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
 
-        if(vehicleIsComplete(vehicle) ){
-            return vehicleDAO.save(vehicle);
+        try {
+            if(vehicleIsComplete(vehicle) ){
+                return vehicleDAO.save(vehicle);
+            }
+        }
+        catch(Exception e) {
+            //TODO add exception handling
         }
 
         //TODO set rejection message and return vehicle
@@ -88,25 +97,25 @@ public class VehicleService implements IVehicleService {
      * @return boolean value for if the vehicle's is considered to be completely filled out
      */
     private boolean vehicleIsComplete(Vehicle vehicle) {
-        if(vehicle.getVehicleSubmissionID() == 0){
+        if(vehicle.getSubmissionID() == 0){
             return false;
         }
-        if(vehicle.getVehicleMake().equals(null) || vehicle.getVehicleMake().isEmpty()){
+        if(vehicle.getMake().equals(null) || vehicle.getMake().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleModel().equals(null) || vehicle.getVehicleModel().isEmpty()){
+        if(vehicle.getModel().equals(null) || vehicle.getModel().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleScore().equals(null) || vehicle.getVehicleScore().isEmpty()){
+        if(vehicle.getScore().equals(null) || vehicle.getScore().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleYear().equals(null) || vehicle.getVehicleYear().isEmpty()){
+        if(vehicle.getYear().equals(null) || vehicle.getYear().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleDescription().equals(null) || vehicle.getVehicleDescription().isEmpty()){
+        if(vehicle.getDescription().equals(null) || vehicle.getDescription().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleOwnerName().equals(null) || vehicle.getVehicleOwnerName().isEmpty()){
+        if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
             return false;
         }
         Photo vehiclesPhoto = vehicle.getPhoto();

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,7 @@ class HotJavaApplicationTests {
 
 	private IVehicleService vehicleService;
 	private Vehicle mockVehicle = new Vehicle();
+	private List<Vehicle> mockVehicleList = new ArrayList<>();
 
 	@MockBean
 	private IVehicleDAO vehicleDAO;
@@ -43,7 +45,7 @@ class HotJavaApplicationTests {
 		 String vehicleYear = "1999";
 	     String vehicleMake = "test make";
 		 String vehicleModel = "test model";
-		 String vehicleScore = "test score";
+		 int vehicleScore = 0;
 		 Photo vehiclePhoto = new Photo();
 		 vehiclePhoto.setPhotoId(111);
 
@@ -76,41 +78,44 @@ class HotJavaApplicationTests {
 	 */
 	@Test
 	void verifyServiceCanAddVehicles() throws Exception{
+		givenVehicleDataIsAvailable();
 		int vehicleSubmissionID = 8675309;
 		String vehicleOwnerName = "test name";
 		String vehicleDescription ="test desc";
 		String vehicleYear = "1999";
 		String vehicleMake = "test make";
 		String vehicleModel = "test model";
-		String vehicleScore = "test score";
+		int vehicleScore = 0;
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
+		
+		mockVehicle.setVehicleSubmissionID(vehicleSubmissionID);
+		mockVehicle.setVehicleOwnerName(vehicleOwnerName);
+		mockVehicle.setVehicleDescription(vehicleDescription);
+		mockVehicle.setVehicleYear(vehicleYear);
+		mockVehicle.setVehicleMake(vehicleMake);
+		mockVehicle.setVehicleModel(vehicleModel);
+		mockVehicle.setVehicleScore(vehicleScore);
+		mockVehicle.setPhoto(vehiclePhoto);
 
-		Vehicle testVehicle = new Vehicle();
-		testVehicle.setVehicleSubmissionID(vehicleSubmissionID);
-		testVehicle.setVehicleOwnerName(vehicleOwnerName);
-		testVehicle.setVehicleDescription(vehicleDescription);
-		testVehicle.setVehicleYear(vehicleYear);
-		testVehicle.setVehicleMake(vehicleMake);
-		testVehicle.setVehicleModel(vehicleModel);
-		testVehicle.setVehicleScore(vehicleScore);
-		testVehicle.setPhoto(vehiclePhoto);
+		vehicleServiceNoMock.save(mockVehicle);
+		mockVehicleList.add(mockVehicle);
 
-		vehicleServiceNoMock.save(testVehicle);
-
-		List<Vehicle> vehicleList = vehicleServiceNoMock.fetchAll();
+		Mockito.when(vehicleDAO.fetchAll()).thenReturn(mockVehicleList);
+		List<Vehicle> vehicleList = vehicleService.fetchAll();
 
 		Boolean vehiclePresent = false;
 		for (Vehicle v: vehicleList) {
 			if(v.getVehicleSubmissionID() == vehicleSubmissionID){
-				if(v == testVehicle){
+				if(v == mockVehicle){
 					vehiclePresent = true;
 				}
 			}
 		}
         assertTrue(vehiclePresent);
+		verify(vehicleDAO, atLeastOnce()).save(mockVehicle);
 	}
 
 	/**
@@ -136,7 +141,7 @@ class HotJavaApplicationTests {
 		mockVehicle.setVehicleYear("2001");
 		mockVehicle.setVehicleMake("Nissan");
 		mockVehicle.setVehicleModel("Silvia");
-		mockVehicle.setVehicleScore("0");
+		mockVehicle.setVehicleScore(0);
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
@@ -174,7 +179,7 @@ class HotJavaApplicationTests {
 		mockVehicle.setVehicleYear("2001");
 		mockVehicle.setVehicleMake("Nissan");
 		mockVehicle.setVehicleModel("Silvia");
-		mockVehicle.setVehicleScore("0");
+		mockVehicle.setVehicleScore(0);
 		Photo vehiclePhoto = new Photo();
 		//photo has no values
 		mockVehicle.setPhoto(vehiclePhoto);
@@ -193,22 +198,47 @@ class HotJavaApplicationTests {
 	 * Validate that vehicles score is updated with message when voting arrow is clicked.
 	 */
 	@Test
-	void vehicleScoreUpdatedWhenVoted(){
-		givenVehicleProfileIsPresent();
-		whenUserVotesWithArrow();
-		thenVehicleScoreIsUpdatedWithMessage();
+	void vehicleScoreUpdatedWhenVoted() throws Exception {
+		givenVehicleDataIsAvailable();
+		givenVehicleProfileIsSaved();
+		whenUserVotesUp();
+		thenVehicleScoreIsIncreasedByOneWithMessage();
+		whenUserVotesDown();
+		thenVehicleScoreIsDecreasedByOneWithMessage();
 	}
 
-	private void givenVehicleProfileIsPresent() {
-		//TODO
+	private void givenVehicleProfileIsSaved() throws Exception {
+		mockVehicle.setVehicleSubmissionID(8675310);
+		mockVehicle.setVehicleOwnerName("coffee");
+		mockVehicle.setVehicleDescription("black");
+		mockVehicle.setVehicleYear("2001");
+		mockVehicle.setVehicleMake("Nissan");
+		mockVehicle.setVehicleModel("Silvia");
+		mockVehicle.setVehicleScore(0);
+		Photo vehiclePhoto = new Photo();
+		vehiclePhoto.setPhotoId(111);
+		vehiclePhoto.setFileName("civic-type-r.jpg");
+		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
+		mockVehicle.setPhoto(vehiclePhoto);
+		Vehicle createdVehicle = vehicleService.save(mockVehicle);
 	}
 
-	private void whenUserVotesWithArrow() {
-		//TODO
+	private void whenUserVotesUp() throws Exception {
+		vehicleService.updateVehicleScore(mockVehicle,true);
 	}
 
-	private void thenVehicleScoreIsUpdatedWithMessage() {
-		//TODO
+	private void whenUserVotesDown() throws Exception {
+		vehicleService.updateVehicleScore(mockVehicle,false);
+	}
+
+	private void thenVehicleScoreIsIncreasedByOneWithMessage() throws Exception {
+		assertTrue(mockVehicle.getVehicleScore() > 0 );
+		verify(vehicleDAO, atLeast(2)).save(mockVehicle);
+	}
+
+	private void thenVehicleScoreIsDecreasedByOneWithMessage() throws Exception {
+		assertTrue(mockVehicle.getVehicleScore() < 1 );
+		verify(vehicleDAO, atLeast(3)).save(mockVehicle);
 	}
 
 
@@ -216,18 +246,56 @@ class HotJavaApplicationTests {
 	 * Validate that page refreshes with new vehicle when vehicle is "skipped".
 	 */
 	@Test
-	void newVehicleWhenSkipped(){
-		givenVehicleProfileIsPresent();
+	void newVehicleWhenSkipped() throws Exception {
+		givenVehicleDataIsAvailable();
+		givenMultipleVehiclesAvailable();
 		whenUserSelectsSkip();
 		pageRefreshWithNewVehicle();
 	}
 
+	private void givenMultipleVehiclesAvailable() throws Exception {
+		Vehicle veh1 = new Vehicle();
+		veh1.setVehicleSubmissionID(8675309);
+		veh1.setVehicleOwnerName("coffee");
+		veh1.setVehicleDescription("black");
+		veh1.setVehicleYear("2001");
+		veh1.setVehicleMake("Nissan");
+		veh1.setVehicleModel("Silvia");
+		veh1.setVehicleScore(0);
+		Photo vehiclePhoto = new Photo();
+		vehiclePhoto.setPhotoId(111);
+		vehiclePhoto.setFileName("civic-type-r.jpg");
+		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
+		veh1.setPhoto(vehiclePhoto);
+		mockVehicleList.add(veh1);
+
+		Vehicle veh2 = new Vehicle();
+		veh2.setVehicleSubmissionID(8675310);
+		veh2.setVehicleOwnerName("coffee");
+		veh2.setVehicleDescription("black");
+		veh2.setVehicleYear("2001");
+		veh2.setVehicleMake("Nissan");
+		veh2.setVehicleModel("Silvia");
+		veh2.setVehicleScore(0);
+		Photo vehiclePhoto2 = new Photo();
+		vehiclePhoto2.setPhotoId(111);
+		vehiclePhoto2.setFileName("civic-type-r.jpg");
+		vehiclePhoto2.setPath("src/main/resources/img/civic-type-r.jpg");
+		veh2.setPhoto(vehiclePhoto);
+		veh2.setVehicleSubmissionID(8675310);
+
+		mockVehicleList.add(veh2);
+	}
+
 	private void pageRefreshWithNewVehicle() {
-		//TODO
+		assertNotEquals(mockVehicle, mockVehicleList.get(0));
+		verify(vehicleDAO, atLeastOnce()).fetchAll();
 	}
 
 	private void whenUserSelectsSkip() {
-		//TODO
+		mockVehicle = mockVehicleList.get(0);
+		Mockito.when(vehicleDAO.fetchAll()).thenReturn(mockVehicleList);
+		mockVehicle = vehicleService.fetchDifferentVehicle(mockVehicle.getVehicleSubmissionID());
 	}
 
 

@@ -11,16 +11,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class VehicleService implements IVehicleService {
-
-    private ArrayList<Vehicle> vehicleArrayForTests; //Temporary list until dao setup
 
     @Autowired
     private IVehicleDAO vehicleDAO;
@@ -67,6 +62,23 @@ public class VehicleService implements IVehicleService {
         return vehicleDAO.fetchAll();
     }
 
+
+    @Override
+    @Cacheable("vehicles")
+    public Vehicle fetchDifferentVehicle(int currentId) {
+        List<Vehicle> vehicleList = vehicleDAO.fetchAll();
+        if(vehicleList.size() > 1) {
+            int rnd = new Random().nextInt(vehicleList.size());
+            var vehicle = vehicleList.get(rnd);
+            if (vehicle.getVehicleSubmissionID() != currentId) {
+                return vehicle;
+            } else {
+                return this.fetchDifferentVehicle(currentId);
+            }
+        }
+        return vehicleList.get(0);
+    }
+
     @Override
     @Cacheable("vehicles")
     public List<Vehicle> fetchVehicles(String name) {
@@ -80,8 +92,22 @@ public class VehicleService implements IVehicleService {
         photoDAO.saveImage(imageFile, photo);
     }
 
+
+    @Override
+    public int updateVehicleScore(Vehicle vehicle, boolean upVote) throws Exception {
+        if(upVote){
+           vehicle.setVehicleScore(vehicle.getVehicleScore() + 1);
+           save(vehicle);
+        }
+        else if(vehicle.getVehicleScore() > 0){
+            vehicle.setVehicleScore(vehicle.getVehicleScore() - 1);
+            save(vehicle);
+        }
+        return vehicle.getVehicleScore();
+    }
+
     /**
-     * Returns a boolean value indicating whether any of the vehicles attributes are null or default.
+     * Returns a boolean value indicating whether any of the vehicles attributes are null or default exlusing the score.
      * Additionally, checks the attributes of the photo object attached to the vehicle for any ull or default attributes
      * (Photo comments allowed to be null or empty for now).
      * @param  vehicle   the vehicle object passed in for its attributes to be evaluated
@@ -95,9 +121,6 @@ public class VehicleService implements IVehicleService {
             return false;
         }
         if(vehicle.getVehicleModel().equals(null) || vehicle.getVehicleModel().isEmpty()){
-            return false;
-        }
-        if(vehicle.getVehicleScore().equals(null) || vehicle.getVehicleScore().isEmpty()){
             return false;
         }
         if(vehicle.getVehicleYear().equals(null) || vehicle.getVehicleYear().isEmpty()){

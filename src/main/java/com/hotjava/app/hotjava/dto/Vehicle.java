@@ -10,7 +10,7 @@ class Vehicle {
     private String vehicleYear;
     private String vehicleMake;
     private String vehicleModel;
-    private String vehicleScore;
+    private int vehicleScore;
 
     private Photo photo;
 }

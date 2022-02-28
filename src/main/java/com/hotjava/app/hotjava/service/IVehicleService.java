@@ -2,6 +2,7 @@ package com.hotjava.app.hotjava.service;
 
 import com.hotjava.app.hotjava.dto.Photo;
 import com.hotjava.app.hotjava.dto.Vehicle;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -37,6 +38,15 @@ public interface IVehicleService {
     List<Vehicle> fetchAll();
 
     /**
+     * Returns a vehicle from the DAO with a different ID than the user is currently viewing
+     * Additionally if the dao has only 1 vehicle it will return the same vehicle
+     * @param  currentId the current vehicle id of which we will be looking for a different one in the dao
+     * @return Vehicle returns a different vehicle than the one who's id was passed in
+     */
+    @Cacheable("vehicles")
+    Vehicle fetchDifferentVehicle(int currentId);
+
+    /**
      * returns all Vehicles matching a passed string value argument.
      * @param name String to match vehicle names to.
      * @return a List of Vehicles with name matching combined name param.
@@ -53,4 +63,11 @@ public interface IVehicleService {
 
      void saveImage(MultipartFile imageFile, Photo photo) throws IOException;
 
+    /**
+     * Returns a vehicles score value after updating the value based on arguments.
+     * @param  vehicle   the vehicle object passed in for its attributes to be evaluated
+     * @param  upVote   boolean value for whether the user Upvoted or Downvoted the vehicle
+     * @return vehicles updated score
+     */
+    int updateVehicleScore(Vehicle vehicle, boolean upVote) throws Exception;
 }

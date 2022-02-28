@@ -37,37 +37,37 @@ class HotJavaApplicationTests {
 	 */
 	@Test
 	void verifyVehicleProperties(){
-		int vehicleSubmissionID = 8675309;
-		 String vehicleOwnerName = "test name";
-		 String vehicleDescription ="test desc";
-		 String vehicleYear = "1999";
-	     String vehicleMake = "test make";
-		 String vehicleModel = "test model";
-		 String vehicleScore = "test score";
-		 Photo vehiclePhoto = new Photo();
-		 vehiclePhoto.setPhotoId(111);
+		int submissionId = 8675309;
+		 String OwnerName = "test name";
+		 String Description ="test desc";
+		 String Year = "1999";
+	     String Make = "test make";
+		 String Model = "test model";
+		 String Score = "test score";
+		 Photo Photo = new Photo();
+		 Photo.setPhotoId(111);
 
 		Vehicle testVehicle = new Vehicle();
-		testVehicle.setVehicleSubmissionID(vehicleSubmissionID);
-		testVehicle.setVehicleOwnerName(vehicleOwnerName);
-		testVehicle.setVehicleDescription(vehicleDescription);
-		testVehicle.setVehicleYear(vehicleYear);
-		testVehicle.setVehicleMake(vehicleMake);
-		testVehicle.setVehicleModel(vehicleModel);
-		testVehicle.setVehicleScore(vehicleScore);
-		testVehicle.setPhoto(vehiclePhoto);
-		vehiclePhoto.setPhotoId(111);
-		vehiclePhoto.setFileName("civic-type-r.jpg");
-		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
+		testVehicle.setSubmissionID(submissionId);
+		testVehicle.setOwnerName(OwnerName);
+		testVehicle.setDescription(Description);
+		testVehicle.setYear(Year);
+		testVehicle.setMake(Make);
+		testVehicle.setModel(Model);
+		testVehicle.setScore(Score);
+		testVehicle.setPhoto(Photo);
+		Photo.setPhotoId(111);
+		Photo.setFileName("civic-type-r.jpg");
+		Photo.setPath("src/main/resources/img/civic-type-r.jpg");
 
-		assertEquals(vehicleSubmissionID,testVehicle.getVehicleSubmissionID());
-		assertEquals(vehicleOwnerName,testVehicle.getVehicleOwnerName());
-		assertEquals(vehicleDescription,testVehicle.getVehicleDescription());
-		assertEquals(vehicleYear,testVehicle.getVehicleYear());
-		assertEquals(vehicleMake,testVehicle.getVehicleMake());
-		assertEquals(vehicleModel,testVehicle.getVehicleModel());
-		assertEquals(vehicleScore,testVehicle.getVehicleScore());
-		assertEquals(vehiclePhoto, testVehicle.getPhoto());
+		assertEquals(submissionId,testVehicle.getSubmissionID());
+		assertEquals(OwnerName,testVehicle.getOwnerName());
+		assertEquals(Description,testVehicle.getDescription());
+		assertEquals(Year,testVehicle.getYear());
+		assertEquals(Make,testVehicle.getMake());
+		assertEquals(Model,testVehicle.getModel());
+		assertEquals(Score,testVehicle.getScore());
+		assertEquals(Photo, testVehicle.getPhoto());
 
 	}
 
@@ -76,41 +76,41 @@ class HotJavaApplicationTests {
 	 */
 	@Test
 	void verifyServiceCanAddVehicles() throws Exception{
-		int vehicleSubmissionID = 8675309;
-		String vehicleOwnerName = "test name";
-		String vehicleDescription ="test desc";
-		String vehicleYear = "1999";
-		String vehicleMake = "test make";
-		String vehicleModel = "test model";
-		String vehicleScore = "test score";
-		Photo vehiclePhoto = new Photo();
-		vehiclePhoto.setPhotoId(111);
-		vehiclePhoto.setFileName("civic-type-r.jpg");
-		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
+		int submissionId = 8675309;
+		String OwnerName = "test name";
+		String Description ="test desc";
+		String Year = "1999";
+		String Make = "test make";
+		String Model = "test model";
+		String Score = "test score";
+		Photo Photo = new Photo();
+		Photo.setPhotoId(111);
+		Photo.setFileName("civic-type-r.jpg");
+		Photo.setPath("src/main/resources/img/civic-type-r.jpg");
 
 		Vehicle testVehicle = new Vehicle();
-		testVehicle.setVehicleSubmissionID(vehicleSubmissionID);
-		testVehicle.setVehicleOwnerName(vehicleOwnerName);
-		testVehicle.setVehicleDescription(vehicleDescription);
-		testVehicle.setVehicleYear(vehicleYear);
-		testVehicle.setVehicleMake(vehicleMake);
-		testVehicle.setVehicleModel(vehicleModel);
-		testVehicle.setVehicleScore(vehicleScore);
-		testVehicle.setPhoto(vehiclePhoto);
+		testVehicle.setSubmissionID(submissionId);
+		testVehicle.setOwnerName(OwnerName);
+		testVehicle.setDescription(Description);
+		testVehicle.setYear(Year);
+		testVehicle.setMake(Make);
+		testVehicle.setModel(Model);
+		testVehicle.setScore(Score);
+		testVehicle.setPhoto(Photo);
 
 		vehicleServiceNoMock.save(testVehicle);
 
 		List<Vehicle> vehicleList = vehicleServiceNoMock.fetchAll();
 
-		Boolean vehiclePresent = false;
+		Boolean Present = false;
 		for (Vehicle v: vehicleList) {
-			if(v.getVehicleSubmissionID() == vehicleSubmissionID){
+			if(v.getSubmissionID() == submissionId){
 				if(v == testVehicle){
-					vehiclePresent = true;
+					Present = true;
 				}
 			}
 		}
-        assertTrue(vehiclePresent);
+        assertTrue(Present);
 	}
 
 	/**
@@ -130,13 +130,13 @@ class HotJavaApplicationTests {
 	}
 
 	private void whenCompleteVehicleFormIsSubmitted() {
-		mockVehicle.setVehicleSubmissionID(8675309);
-		mockVehicle.setVehicleOwnerName("coffee");
-		mockVehicle.setVehicleDescription("black");
-		mockVehicle.setVehicleYear("2001");
-		mockVehicle.setVehicleMake("Nissan");
-		mockVehicle.setVehicleModel("Silvia");
-		mockVehicle.setVehicleScore("0");
+		mockVehicle.setSubmissionID(8675309);
+		mockVehicle.setOwnerName("coffee");
+		mockVehicle.setDescription("black");
+		mockVehicle.setYear("2001");
+		mockVehicle.setMake("Nissan");
+		mockVehicle.setModel("Silvia");
+		mockVehicle.setScore("0");
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
@@ -168,13 +168,13 @@ class HotJavaApplicationTests {
 
 	private void whenIncompleteVehicleForm() {
 		mockVehicle = new Vehicle();
-		mockVehicle.setVehicleSubmissionID(909);
-		mockVehicle.setVehicleOwnerName("coffee");
-		mockVehicle.setVehicleDescription("black");
-		mockVehicle.setVehicleYear("2001");
-		mockVehicle.setVehicleMake("Nissan");
-		mockVehicle.setVehicleModel("Silvia");
-		mockVehicle.setVehicleScore("0");
+		mockVehicle.setSubmissionID(909);
+		mockVehicle.setOwnerName("coffee");
+		mockVehicle.setDescription("black");
+		mockVehicle.setYear("2001");
+		mockVehicle.setMake("Nissan");
+		mockVehicle.setModel("Silvia");
+		mockVehicle.setScore("0");
 		Photo vehiclePhoto = new Photo();
 		//photo has no values
 		mockVehicle.setPhoto(vehiclePhoto);

@@ -1,9 +1,17 @@
 package com.hotjava.app.hotjava.dto;
 
+import javax.persistence.*;
 import lombok.Data;
 
+
+
+@Entity
 public @Data
 class Vehicle {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name = "id")
     private int vehicleSubmissionID;
     private String vehicleOwnerName;
     private String vehicleDescription;
@@ -12,5 +20,6 @@ class Vehicle {
     private String vehicleModel;
     private int vehicleScore;
 
+    @OneToOne(mappedBy = "vehicle")
     private Photo photo;
 }

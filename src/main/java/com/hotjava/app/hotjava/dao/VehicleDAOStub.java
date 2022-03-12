@@ -1,12 +1,13 @@
 package com.hotjava.app.hotjava.dao;
 
 import com.hotjava.app.hotjava.dto.Vehicle;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 @Repository
-
+@Profile("test")
 public class VehicleDAOStub implements IVehicleDAO {
 
     Map<Integer, Vehicle> allVehicles = new HashMap<>();

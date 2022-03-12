@@ -2,13 +2,16 @@ package com.hotjava.app.hotjava.dao;
 
 import com.hotjava.app.hotjava.dto.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository("vehicleDAO")
+//@Repository("vehicleDAO")
+@Repository
+@Profile({"dev", "default"})
 public class VehicleSQLDAO implements IVehicleDAO{
 
     @Autowired

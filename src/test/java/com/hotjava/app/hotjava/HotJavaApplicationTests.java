@@ -57,7 +57,7 @@ class HotJavaApplicationTests {
 		testVehicle.setVehicleMake(vehicleMake);
 		testVehicle.setVehicleModel(vehicleModel);
 		testVehicle.setVehicleScore(vehicleScore);
-		testVehicle.setPhoto(vehiclePhoto);
+		testVehicle.setPhotoID(vehiclePhoto.getPhotoId());
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
@@ -69,7 +69,7 @@ class HotJavaApplicationTests {
 		assertEquals(vehicleMake,testVehicle.getVehicleMake());
 		assertEquals(vehicleModel,testVehicle.getVehicleModel());
 		assertEquals(vehicleScore,testVehicle.getVehicleScore());
-		assertEquals(vehiclePhoto, testVehicle.getPhoto());
+		assertEquals(vehiclePhoto.getPhotoId(), testVehicle.getPhotoID());
 
 	}
 
@@ -98,7 +98,7 @@ class HotJavaApplicationTests {
 		mockVehicle.setVehicleMake(vehicleMake);
 		mockVehicle.setVehicleModel(vehicleModel);
 		mockVehicle.setVehicleScore(vehicleScore);
-		mockVehicle.setPhoto(vehiclePhoto);
+		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
 
 		vehicleServiceNoMock.save(mockVehicle);
 		mockVehicleList.add(mockVehicle);
@@ -146,7 +146,7 @@ class HotJavaApplicationTests {
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
-		mockVehicle.setPhoto(vehiclePhoto);
+		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
 	}
 
 	private void thenVehicleCanBeSavedWithConfirmationMessage() throws Exception {
@@ -182,7 +182,7 @@ class HotJavaApplicationTests {
 		mockVehicle.setVehicleScore(0);
 		Photo vehiclePhoto = new Photo();
 		//photo has no values
-		mockVehicle.setPhoto(vehiclePhoto);
+		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
 	}
 
 	private void thenSubmmittedFormIsRejectedWithIncompleteMessage() throws Exception {
@@ -219,7 +219,7 @@ class HotJavaApplicationTests {
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
-		mockVehicle.setPhoto(vehiclePhoto);
+		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
 		Vehicle createdVehicle = vehicleService.save(mockVehicle);
 	}
 
@@ -266,7 +266,7 @@ class HotJavaApplicationTests {
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
-		veh1.setPhoto(vehiclePhoto);
+		veh1.setPhotoID(vehiclePhoto.getPhotoId());
 		mockVehicleList.add(veh1);
 
 		Vehicle veh2 = new Vehicle();
@@ -281,7 +281,7 @@ class HotJavaApplicationTests {
 		vehiclePhoto2.setPhotoId(111);
 		vehiclePhoto2.setFileName("civic-type-r.jpg");
 		vehiclePhoto2.setPath("src/main/resources/img/civic-type-r.jpg");
-		veh2.setPhoto(vehiclePhoto);
+		veh2.setPhotoID(vehiclePhoto.getPhotoId());
 		veh2.setVehicleSubmissionID(8675310);
 
 		mockVehicleList.add(veh2);

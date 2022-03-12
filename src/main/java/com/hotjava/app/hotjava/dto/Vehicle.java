@@ -3,15 +3,15 @@ package com.hotjava.app.hotjava.dto;
 import javax.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 
 
 @Entity
 public @Data
-class Vehicle {
+class Vehicle implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "id")
     private int vehicleSubmissionID;
     private String vehicleOwnerName;
     private String vehicleDescription;
@@ -20,6 +20,6 @@ class Vehicle {
     private String vehicleModel;
     private int vehicleScore;
 
-    @OneToOne(mappedBy = "vehicle")
-    private Photo photo;
+   // @OneToOne(mappedBy = "vehicle")
+    private int photoID;
 }

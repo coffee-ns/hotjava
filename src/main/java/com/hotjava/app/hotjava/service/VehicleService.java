@@ -28,7 +28,6 @@ public class VehicleService implements IVehicleService {
     }
 
     public VehicleService(IVehicleDAO vehicleDAO) {
-
         this.vehicleDAO = vehicleDAO;
     }
 

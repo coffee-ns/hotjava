@@ -11,7 +11,7 @@ import java.util.Optional;
 
 //@Repository("vehicleDAO")
 @Repository
-@Profile({"dev", "default"})
+@Profile("dev")
 public class VehicleSQLDAO implements IVehicleDAO{
 
     @Autowired

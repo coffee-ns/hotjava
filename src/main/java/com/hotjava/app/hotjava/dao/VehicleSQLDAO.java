@@ -35,8 +35,8 @@ public class VehicleSQLDAO implements IVehicleDAO{
 
     @Override
     public Vehicle fetch(int id) {
-        Vehicle retirevedVehicle = vehicleRepository.findById(id).get();
-        return retirevedVehicle;
+        Vehicle retrievedVehicle = vehicleRepository.findById(id).get();
+        return retrievedVehicle;
     }
 
     @Override

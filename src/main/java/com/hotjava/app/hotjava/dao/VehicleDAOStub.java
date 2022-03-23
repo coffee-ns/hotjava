@@ -14,14 +14,13 @@ public class VehicleDAOStub implements IVehicleDAO {
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-        allVehicles.put(vehicle.getVehicleSubmissionID(), vehicle);
+        allVehicles.put(vehicle.getSubmissionID(), vehicle);
         return vehicle;
     }
 
     @Override
     public List<Vehicle> fetchAll() {
-        List<Vehicle> returnVehicles = new ArrayList(allVehicles.values());
-        return returnVehicles;
+        return (List<Vehicle>) new ArrayList(allVehicles.values());
     }
 
     @Override

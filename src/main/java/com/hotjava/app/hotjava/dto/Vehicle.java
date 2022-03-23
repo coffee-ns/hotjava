@@ -12,13 +12,13 @@ class Vehicle implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int vehicleSubmissionID;
-    private String vehicleOwnerName;
-    private String vehicleDescription;
-    private String vehicleYear;
-    private String vehicleMake;
-    private String vehicleModel;
-    private int vehicleScore;
+    private int submissionID;
+    private String ownerName;
+    private String description;
+    private String year;
+    private String make;
+    private String model;
+    private int score;
 
    // @OneToOne(mappedBy = "vehicle")
     private int photoID;

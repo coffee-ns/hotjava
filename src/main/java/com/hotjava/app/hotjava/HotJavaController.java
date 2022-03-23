@@ -21,7 +21,7 @@ public class HotJavaController {
 
     /**
      * Handle the / endpoint
-     * @return
+     * @return index
      */
     @RequestMapping("/")
     public String index() {

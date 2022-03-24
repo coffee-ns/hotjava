@@ -18,46 +18,48 @@
 </header>
 
 <body>
-  <form>
-    <label for="year">Year</label>
-    <input type="number" id="year" min="1800" max="2023" step="1"><br><br>
+  <div class="container-fluid col-md-6">
+    <form>
+      <label for="year">Year</label>
+      <input type="number" id="year" min="1800" max="2023" step="1"><br><br>
 
-    <label for="make">Make</label>
-    <input type="text" id="make"><br><br>
+      <label for="make">Make</label>
+      <input type="text" id="make"><br><br>
 
-    <label for="model">Make</label>
-    <input type="text" id="model"><br><br>
+      <label for="model">Model</label>
+      <input type="text" id="model"><br><br>
 
-    <label for="owner">Owner</label>
-    <input type="text" id="owner"><br><br>
+      <label for="owner">Owner</label>
+      <input type="text" id="owner"><br><br>
 
-    <label for="minScore">Minimum Score</label><br>
-    <input type="range" id="minScore" name="minScore" min="0" max="100" value="0"
-           oninput="amount.value=minScore.value">
+      <label for="minScore">Minimum Score</label><br>
+      <input type="range" id="minScore" name="minScore" min="0" max="100" value="0"
+             oninput="amount.value=minScore.value">
 
-    <output id="minAmount" name="amount" for="minScore">0</output> <br>
+      <output id="minAmount" name="amount" for="minScore">0</output> <br>
 
-    <label for="maxScore">Maximum Score</label><br>
-    <input type="range" id="maxScore" name="maxScore" min="0" max="100" value="0"
-           oninput="amount.value=maxScore.value">
+      <label for="maxScore">Maximum Score</label><br>
+      <input type="range" id="maxScore" name="maxScore" min="0" max="100" value="0"
+             oninput="amount.value=maxScore.value">
 
-    <output id="maxAmount" name="amount" for="maxScore">0</output>
+      <output id="maxAmount" name="amount" for="maxScore">0</output>
 
-    <br><br>
-    <a class="btn btn-primary" href="#" role="button">Submit</a>
-  </form>
+      <br><br>
+      <a class="btn btn-primary" href="#" role="button">Submit</a>
+    </form>
 
-  <br>
+    <br>
 
-  <p>
-    Search for Year, Make, and model to find a specific vehicle. Alternatively, search for a user directly.
-  </p>
+    <p>
+      Search for Year, Make, and model to find a specific vehicle. Alternatively, search for a user directly.
+    </p>
 
-  <br>
+    <br>
 
-  <p>
-    All search fields can be used independently.
-  </p>
+    <p>
+      All search fields can be used independently.
+    </p>
+  </div>
 </body>
 
 <div th:replace="fragments/footer :: footer" >

@@ -19,12 +19,31 @@ public class HotJavaController {
 
     /**
      * Handle the / endpoint
-     * @return
+     * @return index
      */
     @RequestMapping("/")
     public String index() {
         return "index";
     }
 
+    /**
+     * Handle the /add endpoint
+     * @return addVehicle
+     */
+    @RequestMapping("/add")
+    public String add() { return "addVehicle"; }
 
+    /**
+     * Handle the /search endpoint
+     * @return searchVehicle
+     */
+    @RequestMapping("/search")
+    public String search() { return "searchVehicle"; }
+
+    /**
+     * Handle the /vote endpoint
+     * @return vote
+     */
+    @RequestMapping("/vote")
+    public String vote() { return "vote"; }
 }

@@ -1,16 +1,25 @@
 package com.hotjava.app.hotjava.dto;
 
+import javax.persistence.*;
 import lombok.Data;
 
-public @Data
-class Vehicle {
-    private int vehicleSubmissionID;
-    private String vehicleOwnerName;
-    private String vehicleDescription;
-    private String vehicleYear;
-    private String vehicleMake;
-    private String vehicleModel;
-    private int vehicleScore;
+import java.io.Serializable;
 
-    private Photo photo;
+
+@Entity
+public @Data
+class Vehicle implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private int submissionID;
+    private String ownerName;
+    private String description;
+    private String year;
+    private String make;
+    private String model;
+    private int score;
+
+   // @OneToOne(mappedBy = "vehicle")
+    private int photoID;
 }

@@ -28,15 +28,13 @@ public class VehicleService implements IVehicleService {
     }
 
     public VehicleService(IVehicleDAO vehicleDAO) {
-
         this.vehicleDAO = vehicleDAO;
     }
 
     @Override
     @Cacheable(value="vehicle", key="#id")
     public Vehicle fetchById(int id) {
-        Vehicle foundVehicle = vehicleDAO.fetch(id);
-       return foundVehicle;
+        return vehicleDAO.fetch(id);
     }
 
     @Override
@@ -71,7 +69,7 @@ public class VehicleService implements IVehicleService {
         if(vehicleList.size() > 1) {
             int rnd = new Random().nextInt(vehicleList.size());
             var vehicle = vehicleList.get(rnd);
-            if (vehicle.getVehicleSubmissionID() != currentId) {
+            if (vehicle.getSubmissionID() != currentId) {
                 return vehicle;
             } else {
                 return this.fetchDifferentVehicle(currentId);
@@ -97,14 +95,14 @@ public class VehicleService implements IVehicleService {
     @Override
     public int updateVehicleScore(Vehicle vehicle, boolean upVote) throws Exception {
         if(upVote){
-           vehicle.setVehicleScore(vehicle.getVehicleScore() + 1);
+           vehicle.setScore(vehicle.getScore() + 1);
            save(vehicle);
         }
-        else if(vehicle.getVehicleScore() > 0){
-            vehicle.setVehicleScore(vehicle.getVehicleScore() - 1);
+        else if(vehicle.getScore() > 0){
+            vehicle.setScore(vehicle.getScore() - 1);
             save(vehicle);
         }
-        return vehicle.getVehicleScore();
+        return vehicle.getScore();
     }
 
     /**
@@ -115,30 +113,36 @@ public class VehicleService implements IVehicleService {
      * @return boolean value for if the vehicle's is considered to be completely filled out
      */
     private boolean vehicleIsComplete(Vehicle vehicle) {
-        if(vehicle.getVehicleSubmissionID() == 0){
+        if(vehicle.getSubmissionID() == 0){
             return false;
         }
-        if(vehicle.getVehicleMake().equals(null) || vehicle.getVehicleMake().isEmpty()){
+        if(vehicle.getMake().equals(null) || vehicle.getMake().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleModel().equals(null) || vehicle.getVehicleModel().isEmpty()){
+        if(vehicle.getModel().equals(null) || vehicle.getModel().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleYear().equals(null) || vehicle.getVehicleYear().isEmpty()){
+        if(vehicle.getYear().equals(null) || vehicle.getYear().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleDescription().equals(null) || vehicle.getVehicleDescription().isEmpty()){
+        if(vehicle.getDescription().equals(null) || vehicle.getDescription().isEmpty()){
             return false;
         }
-        if(vehicle.getVehicleOwnerName().equals(null) || vehicle.getVehicleOwnerName().isEmpty()){
+        if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
             return false;
         }
-        Photo vehiclesPhoto = vehicle.getPhoto();
+        /*
+        Photo vehiclesPhoto = vehicle.getPhotoID();
         if(vehiclesPhoto.getPhotoId() == 0
                 || vehiclesPhoto.getPath().equals(null) ||vehiclesPhoto.getPath().isEmpty()
                 || vehiclesPhoto.getFileName().equals(null) || vehiclesPhoto.getFileName().isEmpty() ){
             return false;
         }
+         */
+        if(vehicle.getPhotoID() == 0){
+            return false;
+        }
+
 
         return true;
     }

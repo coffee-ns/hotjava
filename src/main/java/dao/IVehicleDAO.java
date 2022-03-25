@@ -4,6 +4,7 @@ package com.hotjava.app.hotjava.dao;
 import com.hotjava.app.hotjava.dto.Vehicle;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IVehicleDAO {
     Vehicle save(Vehicle vehicle) throws Exception;

@@ -19,18 +19,29 @@
 
 <body>
     <div class="container-fluid col-md-6">
-        <img class="img-fluid mx-auto d-block h-25" src="img/civic-type-r.jpg" alt="Honda Civic Type-R">
-        <br>
-        <p>
-            Here you can submit your vehicle to voting or vote on others that have been submitted!
-            You can search for your favorite makes and models as well giving you the ultimate virtual
-            car show experience
-        </p>
+        <form>
+            <label for="year">Year</label>
+            <input type="number" id="year" min="1800" max="2023" step="1"><br><br>
+
+            <label for="make">Make</label>
+            <input type="text" id="make"><br><br>
+
+            <label for="model">Model</label>
+            <input type="text" id="model"><br><br>
+
+            <label for="desc">Description</label><br>
+            <input type="text" id="desc"><br><br>
+
+            <label for="photoInput">Add Photo</label>
+            <input type="button" id="photoInput" value="Browse" onclick="document.getElementById('file').click();" /> <br><br>
+
+            <a class="btn btn-primary" href="#" role="button">Submit</a>
+        </form>
     </div>
 </body>
 
-    <div th:replace="fragments/footer :: footer" >
+<div th:replace="fragments/footer :: footer" >
 
-    </div>
+</div>
 
 </html>

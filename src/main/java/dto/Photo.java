@@ -15,7 +15,7 @@ class Photo implements Serializable {
     private int photoId;
     private String path;
     private String fileName;
-    private String comments;
+    private String[] comments;
 
    // @ToString.Exclude
    // @OneToOne

@@ -40,6 +40,7 @@ public class VehicleService implements IVehicleService {
     @Override
     @CacheEvict(value="vehicle", key="#id")
     public void delete(int id) throws Exception {
+        //TODO finish implementation of delete to allow the following line to work
         //vehicleDAO.delete(id);
     }
 

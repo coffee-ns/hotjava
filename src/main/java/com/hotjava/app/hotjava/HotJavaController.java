@@ -21,12 +21,19 @@ public class HotJavaController {
 
     /**
      * Handle the / endpoint
-     * @return
+     * @return index
      */
     @RequestMapping("/")
     public String index() {
         return "index";
     }
-
+    /**
+     * Handle the /add endpoint
+     * @return add
+     */
+    @RequestMapping("/add")
+    public String add() {
+        return "add";
+    }
 
 }

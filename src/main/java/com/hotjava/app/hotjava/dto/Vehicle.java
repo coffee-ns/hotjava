@@ -12,7 +12,7 @@ class Vehicle implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int submissionID;
+    private long submissionID; //changed to long
     private String ownerName;
     private String description;
     private String year;
@@ -21,5 +21,5 @@ class Vehicle implements Serializable {
     private int score;
 
    // @OneToOne(mappedBy = "vehicle")
-    private int photoID;
+    private long photoID; //changed to long
 }

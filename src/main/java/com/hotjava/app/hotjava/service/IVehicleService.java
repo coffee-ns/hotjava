@@ -44,7 +44,7 @@ public interface IVehicleService {
      * @return Vehicle returns a different vehicle than the one who's id was passed in
      */
     @Cacheable("vehicles")
-    Vehicle fetchDifferentVehicle(int currentId);
+    Vehicle fetchDifferentVehicle(long currentId);
 
     /**
      * returns all Vehicles matching a passed string value argument.

@@ -19,7 +19,5 @@ class Vehicle implements Serializable {
     private String make;
     private String model;
     private int score;
-
-   // @OneToOne(mappedBy = "vehicle")
     private int photoID;
 }

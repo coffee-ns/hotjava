@@ -40,7 +40,13 @@ public class VehicleService implements IVehicleService {
     @Override
     @CacheEvict(value="vehicle", key="#id")
     public void delete(int id) throws Exception {
-        //vehicleDAO.delete(id);
+        try {
+            //vehicleDAO.delete(id);
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -130,14 +136,6 @@ public class VehicleService implements IVehicleService {
         if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
             return false;
         }
-        /*
-        Photo vehiclesPhoto = vehicle.getPhotoID();
-        if(vehiclesPhoto.getPhotoId() == 0
-                || vehiclesPhoto.getPath().equals(null) ||vehiclesPhoto.getPath().isEmpty()
-                || vehiclesPhoto.getFileName().equals(null) || vehiclesPhoto.getFileName().isEmpty() ){
-            return false;
-        }
-         */
         if(vehicle.getPhotoID() == 0){
             return false;
         }

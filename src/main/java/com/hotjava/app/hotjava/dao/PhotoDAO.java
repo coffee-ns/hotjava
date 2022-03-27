@@ -10,15 +10,6 @@ import java.io.IOException;
 @Repository
 public class PhotoDAO implements IPhotoDAO {
 
-    //@Autowired
-   // private PhotoRepository photoRepository;
-
-   // @Autowired
-    //private KafkaTemplate<String, String> kafkaTemplate;
-
-
-
-
     @Override
     public void save(Photo photo) {
     //TODO photo repo
@@ -26,14 +17,13 @@ public class PhotoDAO implements IPhotoDAO {
 
     @Override
     public void saveImage(MultipartFile imageFile, Photo photo) throws IOException {
-       /* Path currentPath = Paths.get(".");
-        Path absolutePath = currentPath.toAbsolutePath();
-        photo.setPath(absolutePath + "/src/main/resources/static/photos/");
-        byte[] bytes = imageFile.getBytes();
-        Path path = Paths.get(photo.getPath() + imageFile.getOriginalFilename());
-        Files.write(path, bytes);
-        kafkaTemplate.send("photoIn", path.normalize().toString());*/
-        System.out.println("saveImage" + Integer.toString(photo.getPhotoId()));
+        try {
+            System.out.println("saveImage " + photo.getPhotoId());
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

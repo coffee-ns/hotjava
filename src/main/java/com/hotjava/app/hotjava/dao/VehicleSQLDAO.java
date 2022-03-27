@@ -19,8 +19,7 @@ public class VehicleSQLDAO implements IVehicleDAO{
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-        Vehicle createdVehicle = vehicleRepository.save(vehicle);
-        return createdVehicle;
+        return vehicleRepository.save(vehicle);
     }
 
     @Override
@@ -35,13 +34,11 @@ public class VehicleSQLDAO implements IVehicleDAO{
 
     @Override
     public Vehicle fetch(int id) {
-        Vehicle retirevedVehicle = vehicleRepository.findById(id).get();
-        return retirevedVehicle;
+        return vehicleRepository.findById(id).get();
     }
 
     @Override
     public void delete(int id) {
             vehicleRepository.deleteById(id);
-
     }
 }

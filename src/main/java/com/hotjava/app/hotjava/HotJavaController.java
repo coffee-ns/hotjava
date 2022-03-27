@@ -1,10 +1,19 @@
 package com.hotjava.app.hotjava;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
+import com.hotjava.app.hotjava.dto.Photo;
+import com.hotjava.app.hotjava.service.IVehicleService;
+import com.hotjava.app.hotjava.service.VehicleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+//import org.springframework.web.bind.annotation.ResponseStatus;
+//import org.springframework.http.HttpStatus;
 
 
 /**
@@ -18,6 +27,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @Controller
 public class HotJavaController {
+
+    @Autowired
+    IVehicleService vehicleService;
 
     /**
      * Handle the / endpoint
@@ -48,4 +60,20 @@ public class HotJavaController {
      */
     @RequestMapping("/vote")
     public String vote() { return "vote"; }
+
+    /**
+     * Handles the /vehicleUpload endpoint
+     * Send vehicle data
+     * @param imageFile
+     * @param photo
+     * @return
+     */
+
+    @PostMapping("/vehicleUpload")
+    public String vehicleUpload(@RequestParam("imageFile") MultipartFile imageFile, Photo photo) throws IOException {
+    String returnValue = "start";
+    vehicleService.saveImage(imageFile, photo);
+    return returnValue;
+    }
+
 }

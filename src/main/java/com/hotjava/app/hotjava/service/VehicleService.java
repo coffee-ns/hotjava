@@ -63,11 +63,12 @@ public class VehicleService implements IVehicleService {
 
     @Override
     @Cacheable("vehicles")
-    public Vehicle fetchDifferentVehicle(int currentId) {
+    public Vehicle fetchDifferentVehicle(long currentId) { //changed
         List<Vehicle> vehicleList = vehicleDAO.fetchAll();
         if(vehicleList.size() > 1) {
-            int rnd = new Random().nextInt(vehicleList.size());
-            var vehicle = vehicleList.get(rnd);
+            //renamed rnd to randVehicle
+            int randVehicle = new Random().nextInt(vehicleList.size());
+            var vehicle = vehicleList.get(randVehicle);
             if (vehicle.getSubmissionID() != currentId) {
                 return vehicle;
             } else {

@@ -21,5 +21,5 @@ class Vehicle implements Serializable {
     private int score;
 
    // @OneToOne(mappedBy = "vehicle")
-    private long photoID; //changed to long
+    private long photoID; //changed to long.
 }

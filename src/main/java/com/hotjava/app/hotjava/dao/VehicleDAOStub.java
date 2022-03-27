@@ -10,7 +10,7 @@ import java.util.*;
 @Profile("test")
 public class VehicleDAOStub implements IVehicleDAO {
 
-    Map<Long, Vehicle> allVehicles = new HashMap<>(); // changed to long
+    Map<Long, Vehicle> allVehicles = new HashMap<>(); // changed to long.
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {

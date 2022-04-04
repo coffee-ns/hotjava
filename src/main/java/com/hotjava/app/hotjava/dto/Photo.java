@@ -6,19 +6,19 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name="photos")
+public @Data class Photo {
 
-public @Data
-//@Table(name="photos")
-class Photo implements Serializable {
-
-
+    @Id
+    @GeneratedValue
     private int photoId;
     private String path;
     private String fileName;
     private String comments;
 
-   // @ToString.Exclude
-   // @OneToOne
-   // @JoinColumn(name="vehicle_id",referencedColumnName = "id" )
-    private int vehicleID;
+    @ToString.Exclude
+    @ManyToOne
+    @JoinColumn(name="vehicle_submissionid" )
+    private Vehicle vehicle;
 }

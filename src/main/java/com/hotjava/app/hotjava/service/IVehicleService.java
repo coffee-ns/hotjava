@@ -52,7 +52,7 @@ public interface IVehicleService {
      * @return a List of Vehicles with name matching combined name param.
      * TODO specify which attribute of Vehicle we want to filter on
      */
-    List<Vehicle> fetchVehicles(String name) throws IOException;
+    List<Vehicle> fetchVehiclesByMake(String name) throws IOException;
 
     /**
      * saves an image file along with associated photo data

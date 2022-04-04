@@ -4,6 +4,7 @@ import javax.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
@@ -20,6 +21,6 @@ class Vehicle implements Serializable {
     private String model;
     private int score;
 
-   // @OneToOne(mappedBy = "vehicle")
-    private int photoID;
+    @OneToMany(mappedBy = "vehicle")
+    private List<Photo> photos;
 }

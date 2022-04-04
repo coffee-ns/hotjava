@@ -10,6 +10,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
+@ActiveProfiles("test")
 class HotJavaApplicationTests {
 
 	private IVehicleService vehicleService;
@@ -46,8 +48,10 @@ class HotJavaApplicationTests {
 	     String vehicleMake = "test make";
 		 String vehicleModel = "test model";
 		 int vehicleScore = 0;
-		 Photo vehiclePhoto = new Photo();
+		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
+		Photo vehiclePhoto = new Photo();
 		 vehiclePhoto.setPhotoId(111);
+		 vehiclePhotoList.add(vehiclePhoto);
 
 		Vehicle testVehicle = new Vehicle();
 		testVehicle.setSubmissionID(vehicleSubmissionID);
@@ -57,7 +61,7 @@ class HotJavaApplicationTests {
 		testVehicle.setMake(vehicleMake);
 		testVehicle.setModel(vehicleModel);
 		testVehicle.setScore(vehicleScore);
-		testVehicle.setPhotoID(vehiclePhoto.getPhotoId());
+		testVehicle.setPhotos(vehiclePhotoList);
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
@@ -69,7 +73,7 @@ class HotJavaApplicationTests {
 		assertEquals(vehicleMake,testVehicle.getMake());
 		assertEquals(vehicleModel,testVehicle.getModel());
 		assertEquals(vehicleScore,testVehicle.getScore());
-		assertEquals(vehiclePhoto.getPhotoId(), testVehicle.getPhotoID());
+		assertEquals(vehiclePhoto.getPhotoId(), testVehicle.getPhotos().get(0).getPhotoId());
 
 	}
 
@@ -86,10 +90,12 @@ class HotJavaApplicationTests {
 		String vehicleMake = "test make";
 		String vehicleModel = "test model";
 		int vehicleScore = 0;
+		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
+		vehiclePhotoList.add(vehiclePhoto);
 		
 		mockVehicle.setSubmissionID(vehicleSubmissionID);
 		mockVehicle.setOwnerName(vehicleOwnerName);
@@ -98,7 +104,7 @@ class HotJavaApplicationTests {
 		mockVehicle.setMake(vehicleMake);
 		mockVehicle.setModel(vehicleModel);
 		mockVehicle.setScore(vehicleScore);
-		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
+		mockVehicle.setPhotos(vehiclePhotoList);
 
 		vehicleServiceNoMock.save(mockVehicle);
 		mockVehicleList.add(mockVehicle);
@@ -142,11 +148,13 @@ class HotJavaApplicationTests {
 		mockVehicle.setMake("Nissan");
 		mockVehicle.setModel("Silvia");
 		mockVehicle.setScore(0);
+		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
-		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
+		vehiclePhotoList.add(vehiclePhoto);
+		mockVehicle.setPhotos(vehiclePhotoList);
 	}
 
 	private void thenVehicleCanBeSavedWithConfirmationMessage() throws Exception {
@@ -180,9 +188,11 @@ class HotJavaApplicationTests {
 		mockVehicle.setMake("Nissan");
 		mockVehicle.setModel("Silvia");
 		mockVehicle.setScore(0);
+		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
 		Photo vehiclePhoto = new Photo();
 		//photo has no values
-		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
+		vehiclePhotoList.add(vehiclePhoto);
+		mockVehicle.setPhotos(vehiclePhotoList);
 	}
 
 	private void thenSubmmittedFormIsRejectedWithIncompleteMessage() throws Exception {
@@ -215,11 +225,13 @@ class HotJavaApplicationTests {
 		mockVehicle.setMake("Nissan");
 		mockVehicle.setModel("Silvia");
 		mockVehicle.setScore(0);
+		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
-		mockVehicle.setPhotoID(vehiclePhoto.getPhotoId());
+		vehiclePhotoList.add(vehiclePhoto);
+		mockVehicle.setPhotos(vehiclePhotoList);
 		Vehicle createdVehicle = vehicleService.save(mockVehicle);
 	}
 
@@ -262,11 +274,13 @@ class HotJavaApplicationTests {
 		veh1.setMake("Nissan");
 		veh1.setModel("Silvia");
 		veh1.setScore(0);
+		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
 		Photo vehiclePhoto = new Photo();
 		vehiclePhoto.setPhotoId(111);
 		vehiclePhoto.setFileName("civic-type-r.jpg");
 		vehiclePhoto.setPath("src/main/resources/img/civic-type-r.jpg");
-		veh1.setPhotoID(vehiclePhoto.getPhotoId());
+		vehiclePhotoList.add(vehiclePhoto);
+		veh1.setPhotos(vehiclePhotoList);
 		mockVehicleList.add(veh1);
 
 		Vehicle veh2 = new Vehicle();
@@ -277,11 +291,13 @@ class HotJavaApplicationTests {
 		veh2.setMake("Nissan");
 		veh2.setModel("Silvia");
 		veh2.setScore(0);
+		List<Photo> vehiclePhotoList2 = new ArrayList<Photo>();
 		Photo vehiclePhoto2 = new Photo();
 		vehiclePhoto2.setPhotoId(111);
 		vehiclePhoto2.setFileName("civic-type-r.jpg");
 		vehiclePhoto2.setPath("src/main/resources/img/civic-type-r.jpg");
-		veh2.setPhotoID(vehiclePhoto.getPhotoId());
+		vehiclePhotoList2.add(vehiclePhoto2);
+		veh2.setPhotos(vehiclePhotoList2);
 		veh2.setSubmissionID(8675310);
 
 		mockVehicleList.add(veh2);

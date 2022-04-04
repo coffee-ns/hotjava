@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 @Service
 public class VehicleService implements IVehicleService {
@@ -79,9 +80,12 @@ public class VehicleService implements IVehicleService {
 
     @Override
     @Cacheable("vehicles")
-    public List<Vehicle> fetchVehicles(String name) {
-        return vehicleDAO.fetchAll();
-        //TODO change to get filtered vehicles
+    public List<Vehicle> fetchVehiclesByMake(String searchString) {
+        List<Vehicle> filteredVehicleList = vehicleDAO.fetchAll();
+        filteredVehicleList = filteredVehicleList.stream()
+                .filter(vehicle -> vehicle.getMake().contains(searchString))
+                .collect(Collectors.toList());
+        return filteredVehicleList;
     }
 
     @Override
@@ -130,15 +134,15 @@ public class VehicleService implements IVehicleService {
         if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
             return false;
         }
-        /*
-        Photo vehiclesPhoto = vehicle.getPhotoID();
+
+        Photo vehiclesPhoto = vehicle.getPhotos().get(0);
         if(vehiclesPhoto.getPhotoId() == 0
                 || vehiclesPhoto.getPath().equals(null) ||vehiclesPhoto.getPath().isEmpty()
                 || vehiclesPhoto.getFileName().equals(null) || vehiclesPhoto.getFileName().isEmpty() ){
             return false;
         }
-         */
-        if(vehicle.getPhotoID() == 0){
+
+        if(vehicle.getPhotos().get(0).getPhotoId() == 0){
             return false;
         }
 

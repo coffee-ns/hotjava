@@ -66,7 +66,7 @@ public class HotJavaController {
         Photo photo = new Photo();
         try {
             photo.setFileName(imageFile.getOriginalFilename());
-            photo.setVehicleID(vehicle.getSubmissionID());
+            photo.setVehicle(vehicle);
             vehicleService.saveImage(imageFile, photo);
             model.addAttribute("vehicle", vehicle);
             mv.setViewName("addVehicle");

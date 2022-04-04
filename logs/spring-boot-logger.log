@@ -1,0 +1,50 @@
+2022-04-04 16:59:00,198 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:00,199 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:00,199 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 16:59:02,679 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:02,679 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:02,679 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 16:59:03,908 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:03,908 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:03,908 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 16:59:05,121 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:05,121 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:05,122 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 16:59:06,308 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:06,308 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:06,308 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 16:59:07,478 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:07,478 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:07,478 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 16:59:08,661 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 16:59:08,661 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 16:59:08,661 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:09,493 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:09,494 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:09,494 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:11,823 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:11,824 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:11,824 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:13,034 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:13,034 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:13,034 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:14,234 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:14,235 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:14,235 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:15,434 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:15,434 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:15,434 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:16,616 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:16,616 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:16,616 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:00:17,805 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:00:17,806 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:00:17,806 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:01:29,011 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 28832 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:01:29,012 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:01:29,012 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
+2022-04-04 17:01:31,573 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplicationTests in 2.779 seconds (JVM running for 3.383)
+2022-04-04 17:06:18,901 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 26460 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-04 17:06:18,903 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-04 17:06:18,903 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-04 17:06:20,350 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 1.674 seconds (JVM running for 2.029)

@@ -6,7 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/site.css">
+  <link rel="stylesheet" type="text/css" href="css/site.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
@@ -20,7 +20,7 @@
 <body>
   <div class="container-fluid col-md-6">
     <form>
-      <label for="year">Year</label>
+      <label class="year" for="year">Year</label>
       <input type="number" id="year" min="1800" max="2023" step="1"><br><br>
 
       <label for="make">Make</label>
@@ -32,17 +32,12 @@
       <label for="owner">Owner</label>
       <input type="text" id="owner"><br><br>
 
-      <label for="minScore">Minimum Score</label><br>
-      <input type="range" id="minScore" name="minScore" min="0" max="100" value="0"
-             oninput="amount.value=minScore.value">
+      <div class="slideContainer">
+        <input type="range" min="1" max="100" value="1" class="slider" id="minRange">
+        <p>Minimum Score: <span id="minScore"></span></p>
+      </div>
 
-      <output id="minAmount" name="amount" for="minScore">0</output> <br>
-
-      <label for="maxScore">Maximum Score</label><br>
-      <input type="range" id="maxScore" name="maxScore" min="0" max="100" value="0"
-             oninput="amount.value=maxScore.value">
-
-      <output id="maxAmount" name="amount" for="maxScore">0</output>
+      <script src="js/scripts.js"></script>
 
       <br><br>
       <a class="btn btn-primary" href="#" role="button">Submit</a>

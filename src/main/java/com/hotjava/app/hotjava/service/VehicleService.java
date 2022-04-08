@@ -131,9 +131,10 @@ public class VehicleService implements IVehicleService {
         if(vehicle.getDescription().equals(null) || vehicle.getDescription().isEmpty()){
             return false;
         }
-        if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
+
+        /*if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
             return false;
-        }
+        }*/
 
         Photo vehiclesPhoto = vehicle.getPhotos().get(0);
         return vehiclesPhoto.getPhotoId() != 0

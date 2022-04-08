@@ -1,159 +1,52 @@
-2022-04-04 16:59:00,198 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:00,199 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:00,199 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 16:59:02,679 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:02,679 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:02,679 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 16:59:03,908 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:03,908 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:03,908 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 16:59:05,121 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:05,121 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:05,122 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 16:59:06,308 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:06,308 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:06,308 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 16:59:07,478 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:07,478 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:07,478 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 16:59:08,661 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 24828 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 16:59:08,661 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 16:59:08,661 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:09,493 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:09,494 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:09,494 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:11,823 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:11,824 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:11,824 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:13,034 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:13,034 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:13,034 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:14,234 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:14,235 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:14,235 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:15,434 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:15,434 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:15,434 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:16,616 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:16,616 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:16,616 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:00:17,805 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 29692 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:00:17,806 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:00:17,806 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:01:29,011 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplicationTests using Java 17.0.2 on Stallion with PID 28832 (started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:01:29,012 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:01:29,012 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: test
-2022-04-04 17:01:31,573 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplicationTests in 2.779 seconds (JVM running for 3.383)
-2022-04-04 17:06:18,901 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 26460 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
-2022-04-04 17:06:18,903 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-04 17:06:18,903 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-04 17:06:20,350 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 1.674 seconds (JVM running for 2.029)
-2022-04-06 18:15:26,339 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 6852 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:15:26,344 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:15:26,345 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:18:58,003 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 8496 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:18:58,013 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:18:58,014 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:21:52,016 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 11072 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:21:52,019 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:21:52,020 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:22:28,850 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 19100 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:22:28,853 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:22:28,854 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:22:31,876 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.428 seconds (JVM running for 4.04)
-2022-04-06 18:34:13,991 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 19620 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:34:13,994 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:34:13,995 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:34:16,777 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.188 seconds (JVM running for 3.803)
-2022-04-06 18:37:22,032 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 18072 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:37:22,035 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:37:22,035 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:37:24,791 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.184 seconds (JVM running for 3.999)
-2022-04-06 18:44:05,434 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 20448 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:44:05,437 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:44:05,437 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:44:08,279 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.256 seconds (JVM running for 3.889)
-2022-04-06 18:45:07,815 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 11980 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:45:07,818 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:45:07,818 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:45:10,605 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.207 seconds (JVM running for 3.961)
-2022-04-06 18:46:19,776 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 23944 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:46:19,779 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:46:19,779 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:46:22,535 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.17 seconds (JVM running for 3.854)
-2022-04-06 18:47:46,150 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 9084 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:47:46,153 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:47:46,154 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:47:49,008 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.272 seconds (JVM running for 3.94)
-2022-04-06 18:48:09,602 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 23016 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:48:09,605 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:48:09,605 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:48:12,377 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.181 seconds (JVM running for 3.794)
-2022-04-06 18:49:45,330 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 7768 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:49:45,332 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:49:45,333 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:49:48,074 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.163 seconds (JVM running for 3.791)
-2022-04-06 18:50:17,946 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 260 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:50:17,949 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:50:17,949 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:50:20,637 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.093 seconds (JVM running for 3.686)
-2022-04-06 18:50:59,697 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 7312 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:50:59,700 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:50:59,700 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:51:02,506 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.208 seconds (JVM running for 3.802)
-2022-04-06 18:51:24,522 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 16600 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:51:24,525 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:51:24,525 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:51:27,341 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.244 seconds (JVM running for 3.836)
-2022-04-06 18:51:48,767 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 21580 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:51:48,770 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:51:48,771 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:51:51,549 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.187 seconds (JVM running for 3.857)
-2022-04-06 18:52:56,882 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 23272 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:52:56,885 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:52:56,886 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:52:59,755 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.334 seconds (JVM running for 4.082)
-2022-04-06 18:53:18,137 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 3816 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:53:18,140 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:53:18,141 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:53:20,918 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.189 seconds (JVM running for 3.813)
-2022-04-06 18:53:34,337 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 10040 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:53:34,340 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:53:34,340 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:53:37,109 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.174 seconds (JVM running for 3.78)
-2022-04-06 18:54:01,381 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 17496 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:54:01,384 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:54:01,384 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:54:04,111 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.14 seconds (JVM running for 3.74)
-2022-04-06 18:55:21,778 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 6004 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:55:21,781 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:55:21,781 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:55:24,566 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.191 seconds (JVM running for 3.783)
-2022-04-06 18:55:37,260 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 23976 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:55:37,263 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:55:37,263 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:55:40,073 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.257 seconds (JVM running for 3.877)
-2022-04-06 18:56:55,847 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 2136 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:56:55,850 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:56:55,850 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:56:58,616 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.168 seconds (JVM running for 3.776)
-2022-04-06 18:57:28,329 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 18700 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:57:28,333 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:57:28,333 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:57:31,046 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.124 seconds (JVM running for 3.698)
-2022-04-06 18:57:34,808 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 17540 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:57:34,811 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:57:34,812 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:57:37,565 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.203 seconds (JVM running for 3.862)
-2022-04-06 18:59:04,165 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 3124 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:59:04,168 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:59:04,168 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:59:06,913 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.158 seconds (JVM running for 3.791)
-2022-04-06 18:59:19,636 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 16084 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:59:19,639 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:59:19,639 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:59:22,461 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.241 seconds (JVM running for 3.869)
-2022-04-06 18:59:37,039 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 13804 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
-2022-04-06 18:59:37,042 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-06 18:59:37,042 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-04-06 18:59:39,757 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.134 seconds (JVM running for 3.749)
+2022-04-08 17:56:04,569 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 9300 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 17:56:04,573 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 17:56:04,574 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 17:56:07,783 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.645 seconds (JVM running for 6.015)
+2022-04-08 18:01:58,422 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 22632 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:01:58,425 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:01:58,425 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:02:01,340 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.37 seconds (JVM running for 4.033)
+2022-04-08 18:05:14,866 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 4200 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:05:14,869 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:05:14,870 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:05:17,709 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.264 seconds (JVM running for 3.932)
+2022-04-08 18:05:35,809 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 29640 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:05:35,812 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:05:35,812 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:05:38,597 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.203 seconds (JVM running for 3.842)
+2022-04-08 18:09:15,045 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 8904 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:09:15,048 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:09:15,048 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:09:17,916 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.276 seconds (JVM running for 3.903)
+2022-04-08 18:19:36,729 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 5020 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:19:36,732 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:19:36,733 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:19:39,485 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.175 seconds (JVM running for 3.848)
+2022-04-08 18:23:02,109 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 26968 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:23:02,111 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:23:02,111 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:23:04,756 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.041 seconds (JVM running for 3.647)
+2022-04-08 18:33:08,877 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 12952 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:33:08,881 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:33:08,882 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:33:11,742 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.342 seconds (JVM running for 4.148)
+2022-04-08 18:36:52,972 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 29428 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:36:52,975 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:36:52,976 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:36:55,818 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.26 seconds (JVM running for 3.873)
+2022-04-08 18:39:04,638 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 8592 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:39:04,640 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:39:04,641 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:39:07,450 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.249 seconds (JVM running for 3.906)
+2022-04-08 18:45:52,536 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 24828 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:45:52,539 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:45:52,540 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:45:55,328 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.247 seconds (JVM running for 3.867)
+2022-04-08 18:46:38,744 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 8928 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:46:38,747 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:46:38,748 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:46:41,428 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.086 seconds (JVM running for 3.687)
+2022-04-08 18:48:17,214 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.1 on DESKTOP-FPU8CMM with PID 28040 (C:\Users\Work\Documents\GitHub\hotjava\target\classes started by Work in C:\Users\Work\Documents\GitHub\hotjava)
+2022-04-08 18:48:17,217 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-08 18:48:17,218 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-08 18:48:19,997 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.206 seconds (JVM running for 3.826)

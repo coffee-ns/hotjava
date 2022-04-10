@@ -57,7 +57,6 @@ public class HotJavaController {
     public ModelAndView add() {
         ModelAndView mv = new ModelAndView();
         List<String> goodValidations = new ArrayList<String>() ;
-        goodValidations.add("test");
         mv.addObject("goodValidations", goodValidations);
         List<String> badValidations = new ArrayList<String>() ;
         mv.addObject("badValidations", badValidations);
@@ -93,6 +92,10 @@ public class HotJavaController {
 
         mv.addObject("photo", photo);
         mv.addObject("vehicle",vehicle);
+
+        List<String> goodValidations = new ArrayList<String>() ;
+        goodValidations.add("Your Vehicle has been Added");
+        mv.addObject("goodValidations",goodValidations);
         return mv;
     }
 
@@ -158,16 +161,23 @@ public class HotJavaController {
     }
 
     @PostMapping("/voteUpdate")
-    public String vote(Vehicle vehicle, boolean upvote) {
+    public ModelAndView vote(Vehicle vehicle, boolean upvote) {
+        ModelAndView mv = new ModelAndView();
         log.debug("Entering vote endpoint");
     try {
         vehicleService.updateVehicleScore(vehicle,upvote);
         log.info("Voted for Vehicle");
     } catch (Exception e) {
         log.error("Couldn't cast vote for vehicle... Message: " + e.getMessage(), e);
-        return "error";
+        mv.setViewName("error");
+        return mv;
     }
-        return "vote";
+        List<String> goodValidations = new ArrayList<String>() ;
+        goodValidations.add("Vehicle Score updated");
+        mv.addObject("goodValidations",goodValidations);
+
+        mv.setViewName("vote");
+        return mv;
     }
 
     /**

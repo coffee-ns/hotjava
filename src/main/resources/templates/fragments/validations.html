@@ -1,0 +1,12 @@
+
+<div th:fragment="validations" >
+    <div style="align-self: center; text-align: center">
+    <div th:each="goodValidation : ${goodValidations}" style="padding-bottom: 1rem">
+        <p th:text="${goodValidation}" style="color: mediumseagreen; font-weight: bold" ></p>
+        </div>
+
+    <div th:each="badValidation : ${badValidations}">
+        <p th:text="${badValidation}"></p>
+    </div>
+        </div>
+</div>

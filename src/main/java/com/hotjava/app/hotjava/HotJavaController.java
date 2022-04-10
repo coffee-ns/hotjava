@@ -20,6 +20,7 @@ import java.io.IOException;
 //import org.springframework.web.bind.annotation.ResponseStatus;
 //import org.springframework.http.HttpStatus;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -53,7 +54,16 @@ public class HotJavaController {
      * @return addVehicle
      */
     @RequestMapping("/add")
-    public String add() { return "addVehicle"; }
+    public ModelAndView add() {
+        ModelAndView mv = new ModelAndView();
+        List<String> goodValidations = new ArrayList<String>() ;
+        goodValidations.add("test");
+        mv.addObject("goodValidations", goodValidations);
+        List<String> badValidations = new ArrayList<String>() ;
+        mv.addObject("badValidations", badValidations);
+        mv.setViewName("addVehicle");
+        return mv;
+    }
 
     @PostMapping("/saveVehicle")
     public ModelAndView addVehicle(Vehicle vehicle, @RequestParam(value="imageFile", required = false)MultipartFile imageFile, Model model) {

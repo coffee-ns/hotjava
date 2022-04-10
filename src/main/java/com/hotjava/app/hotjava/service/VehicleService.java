@@ -62,7 +62,6 @@ public class VehicleService implements IVehicleService {
 
 
     @Override
-    @Cacheable("vehicles")
     public Vehicle fetchDifferentVehicle(int currentId) {
         List<Vehicle> vehicleList = vehicleDAO.fetchAll();
         if(vehicleList.size() > 1) {
@@ -78,7 +77,6 @@ public class VehicleService implements IVehicleService {
     }
 
     @Override
-    @Cacheable("vehicles")
     public List<Vehicle> fetchVehiclesByMake(String searchString) {
         List<Vehicle> filteredVehicleList = vehicleDAO.fetchAll();
         filteredVehicleList = filteredVehicleList.stream()

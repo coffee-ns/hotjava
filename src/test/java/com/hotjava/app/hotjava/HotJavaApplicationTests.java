@@ -185,14 +185,10 @@ class HotJavaApplicationTests {
 		mockVehicle.setOwnerName("coffee");
 		mockVehicle.setDescription("black");
 		mockVehicle.setYear("2001");
-		mockVehicle.setMake("Nissan");
-		mockVehicle.setModel("Silvia");
 		mockVehicle.setScore(0);
-		List<Photo> vehiclePhotoList = new ArrayList<Photo>();
-		Photo vehiclePhoto = new Photo();
-		//photo has no values
-		vehiclePhotoList.add(vehiclePhoto);
-		mockVehicle.setPhotos(vehiclePhotoList);
+		mockVehicle.setMake("");
+		mockVehicle.setModel("");
+		//missing make and model
 	}
 
 	private void thenSubmmittedFormIsRejectedWithIncompleteMessage() throws Exception {
@@ -201,7 +197,6 @@ class HotJavaApplicationTests {
 		//vehicleDAO should not be called
 		verify(vehicleDAO, never()).save(mockVehicle);
 
-		//TODO verify missing field message
 	}
 
 	/**

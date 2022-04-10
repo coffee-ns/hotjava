@@ -46,7 +46,12 @@ public class VehicleService implements IVehicleService {
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
+        if(vehicleIsComplete(vehicle)) {
             return vehicleDAO.save(vehicle);
+        }
+        else{
+            return vehicle;
+        }
     }
 
     @Override
@@ -110,29 +115,14 @@ public class VehicleService implements IVehicleService {
      * @return boolean value for if the vehicle's is considered to be completely filled out
      */
     private boolean vehicleIsComplete(Vehicle vehicle) {
-        if(vehicle.getSubmissionID() == 0){
-            return false;
-        }
+
         if(vehicle.getMake().equals(null) || vehicle.getMake().isEmpty()){
             return false;
         }
         if(vehicle.getModel().equals(null) || vehicle.getModel().isEmpty()){
             return false;
         }
-        if(vehicle.getYear().equals(null) || vehicle.getYear().isEmpty()){
-            return false;
-        }
-        if(vehicle.getDescription().equals(null) || vehicle.getDescription().isEmpty()){
-            return false;
-        }
 
-        /*if(vehicle.getOwnerName().equals(null) || vehicle.getOwnerName().isEmpty()){
-            return false;
-        }*/
-
-        Photo vehiclesPhoto = vehicle.getPhotos().get(0);
-        return vehiclesPhoto.getPhotoId() != 0
-                && !vehiclesPhoto.getPath().equals(null) && !vehiclesPhoto.getPath().isEmpty()
-                && !vehiclesPhoto.getFileName().equals(null) && !vehiclesPhoto.getFileName().isEmpty();
+        return true;
     }
 }

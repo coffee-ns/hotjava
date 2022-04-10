@@ -46,13 +46,7 @@ public class VehicleService implements IVehicleService {
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-
-        if(vehicleIsComplete(vehicle) ){
             return vehicleDAO.save(vehicle);
-        }
-
-        //TODO set rejection message and return vehicle
-        return vehicle;
     }
 
     @Override

@@ -19,25 +19,25 @@
 
 <body>
     <div class="container-fluid col-md-6">
-        <form action="#" th:action="@{/add}" th:object="${vehicle}" enctype="multipart/form-data" method="post">
-            <input type="hidden" name="submissionID" id="submissionID" field="*{submissionID}">
-            <input type="hidden" name="ownerName" id="ownerName" field="*{ownerName}">
+        <form action="/saveVehicle" th:object="${vehicle}" enctype="multipart/form-data" method="post">
+               <input type="hidden" name="submissionID" id="submissionID" value="0" field="*{submissionID}">
+               <input type="hidden" name="ownerName" id="ownerName"  field="*{ownerName}">
 
-            <label for="year">Year</label>
-            <input type="number" name="year" id="year" min="1800" max="2023" step="1" required="required" field="*{year}"><br><br>
+              <label for="year">Year</label>
+              <input type="number" name="year" id="year" min="1800" max="2023" step="1" required="required" field="*{year}"><br><br>
 
-            <label for="make">Make</label>
-            <input type="text" name="make" id="make" required="required" field="*{make}"><br><br>
+              <label for="make">Make</label>
+              <input type="text" name="make" id="make" required="required"  field="*{make}"><br><br>
 
-            <label for="model">Model</label>
-            <input type="text" name="model" id="model" required="required" field="*{model}"><br><br>
+              <label for="model">Model</label>
+              <input type="text" name="model" id="model" required="required"  field="*{model}"><br><br>
 
-            <label for="desc">Description</label><br>
-            <input type="text" name="description" id="desc" required="required" field="*{description}"><br><br>
+              <label for="desc">Description</label><br>
+              <input type="text" name="description" id="desc" required="required"  field="*{description}"><br><br>
 
-            <!--<label for="photoInput">Add Photo</label>
-            <input type="button" id="photoInput" value="Browse" onclick="document.getElementById('file').click();" /> <br><br>
-            -->
+              <!--<label for="photoInput">Add Photo</label>
+              <input type="button" id="photoInput" value="Browse" onclick="document.getElementById('file').click();" /> <br><br>
+              -->
             <input type="file" name="imageFile" required="required"/>
             <button class="btn btn-primary" name="add" type="submit" value="0">Submit</button>
 

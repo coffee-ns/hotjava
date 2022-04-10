@@ -55,7 +55,7 @@ public class HotJavaController {
     @RequestMapping("/add")
     public String add() { return "addVehicle"; }
 
-    @PostMapping("/addVehicle")
+    @PostMapping("/saveVehicle")
     public ModelAndView addVehicle(Vehicle vehicle, @RequestParam(value="imageFile", required = false)MultipartFile imageFile, Model model) {
         log.debug("Entering add Vehicle endpoint.");
         ModelAndView mv = new ModelAndView();

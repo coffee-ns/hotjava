@@ -19,6 +19,6 @@ public @Data class Photo {
 
     @ToString.Exclude
     @ManyToOne
-    @JoinColumn(name="vehicle_submissionid" )
+    @JoinColumn(name="submissionid" )
     private Vehicle vehicle;
 }

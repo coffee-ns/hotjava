@@ -129,7 +129,6 @@ class HotJavaApplicationTests {
 	 */
 	@Test
 	void vehicleFormSubmissionWithAllData() throws Exception {
-		//TODO adjust method below after views and forms are created
 		givenVehicleDataIsAvailable();
 		whenCompleteVehicleFormIsSubmitted();
 		thenVehicleCanBeSavedWithConfirmationMessage();
@@ -158,12 +157,9 @@ class HotJavaApplicationTests {
 	}
 
 	private void thenVehicleCanBeSavedWithConfirmationMessage() throws Exception {
-		//TODO adjust method below after views and forms are created
 		Vehicle createdVehicle = vehicleService.save(mockVehicle);
 		assertEquals(mockVehicle,createdVehicle);
 		verify(vehicleDAO, atLeastOnce()).save(mockVehicle);
-
-		//TODO verify confirmation
 	}
 
 

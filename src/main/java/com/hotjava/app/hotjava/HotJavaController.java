@@ -104,8 +104,20 @@ public class HotJavaController {
      * Handle the /search endpoint
      * @return searchVehicle
      */
-    @RequestMapping("/search")
-    public String search() { return "searchVehicle"; }
+    @GetMapping("/search")
+    public ModelAndView search() {   log.debug("Entering search endpoint.");
+        ModelAndView mv = new ModelAndView();
+        try {
+            List<Vehicle> vehicleList = vehicleService.fetchAll();
+            mv.addObject("vehicles", vehicleList);
+            log.info("vehicles etrieved");
+        } catch (Exception e) {
+            log.error("Failed to retrieve vehicles");
+            mv.setViewName("error");
+            return mv;
+        }
+        mv.setViewName("searchVehicle");
+        return mv; }
 
     /**
      * Handle the /searchVehicle endpoint

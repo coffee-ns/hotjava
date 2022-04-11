@@ -21,7 +21,7 @@
 
 </div>
 
-<body>
+<body style="margin-bottom: 50px">
   <div class="container-fluid col-md-6">
     <form>
       <label class="year" for="year">Year</label>
@@ -60,18 +60,22 @@
     </p>
   </div>
 
-  <h3 style="text-align: center; align-self: center; font-weight: bold; padding-top: .5rem; border-top: darkred thin solid">Existing Vehicles</h3>
-  <div>
-    <div th:each="vehicle : ${vehicles}">
-      <div style="border: black solid 1px; padding: 3px">
-      <p th:text="${vehicle.getMake() + '  ' + vehicle.getModel() + '  ' + vehicle.getYear() + '     ' + 'score:' + ' ' + vehicle.getScore() }" style="text-align: center"></p>
+  <h3 style="text-align: center; align-self: center; font-weight: bold; padding-top: .5rem; border-top: darkred thin solid" class="card-header mb-1">Existing Vehicles</h3>
+  <div class="container">
+    <div th:each="vehicle : ${vehicles}" class="row">
+      <div class="card text-white bg-secondary mb-3 p-3 col">
+        <div class="card-header col" th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></div>
+        <div class="card-body">
+          <h5 class="card-title" th:text="'Score:' + ' ' + ${vehicle.getScore()}">Secondary card title</h5>
+          <p class="card-text" th:text="${vehicle.getDescription()}"></p>
+        </div>
       </div>
     </div>
   </div>
+
+
 </body>
 
-<div th:replace="fragments/footer :: footer" >
-
-</div>
+<div th:replace="fragments/footer :: footer" ></div>
 
 </html>

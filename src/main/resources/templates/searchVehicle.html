@@ -59,6 +59,15 @@
       All search fields can be used independently.
     </p>
   </div>
+
+  <h3 style="text-align: center; align-self: center; font-weight: bold; padding-top: .5rem; border-top: darkred thin solid">Existing Vehicles</h3>
+  <div>
+    <div th:each="vehicle : ${vehicles}">
+      <div style="border: black solid 1px; padding: 3px">
+      <p th:text="${vehicle.getMake() + '  ' + vehicle.getModel() + '  ' + vehicle.getYear() + '     ' + 'score:' + ' ' + vehicle.getScore() }" style="text-align: center"></p>
+      </div>
+    </div>
+  </div>
 </body>
 
 <div th:replace="fragments/footer :: footer" >

@@ -110,7 +110,7 @@ public class HotJavaController {
         try {
             List<Vehicle> vehicleList = vehicleService.fetchAll();
             mv.addObject("vehicles", vehicleList);
-            log.info("vehicles etrieved");
+            log.info("vehicles retrieved");
         } catch (Exception e) {
             log.error("Failed to retrieve vehicles");
             mv.setViewName("error");

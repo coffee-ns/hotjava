@@ -2,6 +2,7 @@ package com.hotjava.app.hotjava.dto;
 
 import javax.persistence.*;
 import lombok.Data;
+import lombok.Value;
 
 import java.io.Serializable;
 import java.util.List;

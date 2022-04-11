@@ -50,3 +50,62 @@
 2022-04-08 18:48:17,217 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
 2022-04-08 18:48:17,218 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2022-04-08 18:48:19,997 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 3.206 seconds (JVM running for 3.826)
+2022-04-11 16:29:11,939 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 45568 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-11 16:29:11,941 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-11 16:29:11,941 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-11 16:29:21,757 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 44364 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-11 16:29:21,758 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-11 16:29:21,758 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-11 16:29:23,593 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 2.058 seconds (JVM running for 2.363)
+2022-04-11 16:29:52,660 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] Entering search endpoint.
+2022-04-11 16:29:52,744 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] vehicles etrieved
+2022-04-11 16:31:14,494 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-5] Entering add Vehicle endpoint.
+2022-04-11 16:31:14,524 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-5] Successfully added vehicle to model.
+2022-04-11 16:31:16,518 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] Entering search endpoint.
+2022-04-11 16:31:16,518 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] vehicles etrieved
+2022-04-11 16:31:49,382 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Entering search endpoint.
+2022-04-11 16:31:49,383 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] vehicles etrieved
+2022-04-11 16:31:57,247 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-4] Entering search endpoint.
+2022-04-11 16:31:57,248 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-4] vehicles etrieved
+2022-04-11 16:33:27,285 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 31844 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-11 16:33:27,287 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-11 16:33:27,287 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-11 16:33:28,852 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 1.783 seconds (JVM running for 2.089)
+2022-04-11 16:34:25,673 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Entering search endpoint.
+2022-04-11 16:34:25,754 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] vehicles etrieved
+2022-04-11 16:34:33,443 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-4] Entering search endpoint.
+2022-04-11 16:34:33,444 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-4] vehicles etrieved
+2022-04-11 16:35:56,684 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Entering add Vehicle endpoint.
+2022-04-11 16:35:56,710 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Successfully added vehicle to model.
+2022-04-11 16:39:50,818 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-4] Entering search endpoint.
+2022-04-11 16:39:50,818 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-4] vehicles etrieved
+2022-04-11 16:39:53,555 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] Entering search endpoint.
+2022-04-11 16:39:53,555 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] vehicles etrieved
+2022-04-11 16:47:54,114 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 39432 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-11 16:47:54,115 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-11 16:47:54,116 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-11 16:47:55,650 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 1.776 seconds (JVM running for 2.096)
+2022-04-11 16:48:11,504 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Entering search endpoint.
+2022-04-11 16:48:11,579 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] vehicles etrieved
+2022-04-11 16:48:18,770 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] Entering search endpoint.
+2022-04-11 16:48:18,771 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-7] vehicles etrieved
+2022-04-11 16:57:00,380 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-8] Entering search endpoint.
+2022-04-11 16:57:00,381 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-8] vehicles etrieved
+2022-04-11 16:57:13,765 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Entering search endpoint.
+2022-04-11 16:57:13,766 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] vehicles etrieved
+2022-04-11 16:57:18,300 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-2] Entering search endpoint.
+2022-04-11 16:57:18,300 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-2] vehicles etrieved
+2022-04-11 16:57:53,499 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 41688 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-11 16:57:53,500 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-11 16:57:53,500 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-11 16:57:55,299 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 2.03 seconds (JVM running for 3.117)
+2022-04-11 16:58:02,815 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] Entering search endpoint.
+2022-04-11 17:01:52,640 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-1] vehicles retrieved
+2022-04-11 17:15:36,322 INFO org.springframework.boot.StartupInfoLogger [main] Starting HotJavaApplication using Java 17.0.2 on Stallion with PID 44448 (C:\Users\Mason\Documents\GitHub\hotjava\target\classes started by Mason in C:\Users\Mason\Documents\GitHub\hotjava)
+2022-04-11 17:15:36,324 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-04-11 17:15:36,324 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-04-11 17:15:37,897 INFO org.springframework.boot.StartupInfoLogger [main] Started HotJavaApplication in 1.827 seconds (JVM running for 2.134)
+2022-04-11 17:17:02,730 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-8] Entering add Vehicle endpoint.
+2022-04-11 17:17:02,781 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-8] Successfully added vehicle to model.
+2022-04-11 17:17:21,314 DEBUG com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-2] Entering search endpoint.
+2022-04-11 17:17:21,366 INFO com.hotjava.app.hotjava.HotJavaController [http-nio-8080-exec-2] vehicles retrieved

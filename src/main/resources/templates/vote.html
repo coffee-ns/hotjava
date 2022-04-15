@@ -22,17 +22,18 @@
 </div>
 
 <body>
-    <div class="container-fluid col-md-6" stlye="padding-top: 10px;">
+    <div th:object = "${vehicle}" class="container-fluid col-md-6" stlye="padding-top: 10px;">
+
         <img class="img-fluid mx-auto d-block h-25" src="img/nissan-z-nismo.jpg" alt="Nissan-Z-Nismo">
         <br>
-        <span id="vehicle" style="font-size:30px;"><strong>2022 Nissan Z Nismo</strong></span>
+        <span id="vehicle" style="font-size:30px;"><strong th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></strong></span>
 
-        <button style="float: right;" id="downVote" class="btn btn-danger"><i class="bi bi-arrow-down"></i></button>
+        <button style="float: right;" id="downVote" class="btn btn-danger"><i class="bi bi-arrow-down" ></i></button>
         <button style="float: right;" id="upVote" class="btn btn-success"><i class="bi bi-arrow-up"></i></button>
-        <span style="float: right; margin-right: 1em; margin-top: 0.5em; font-weight: bold;" id="vehicleScore">Score: 1</span>
+        <span style="float: right; margin-right: 1em; margin-top: 0.5em; font-weight: bold;" id="vehicleScore" th:text="${vehicle.getScore()}"></span>
 
         <br><br>
-        <span id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        <span id="description" th:text="${vehicle.getDescription()}"></span>
 
     </div>
 </body>

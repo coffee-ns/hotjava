@@ -69,6 +69,11 @@
           <h5 class="card-title" th:text="'Score:' + ' ' + ${vehicle.getScore()}">Secondary card title</h5>
           <p class="card-text" th:text="${vehicle.getDescription()}"></p>
         </div>
+        <div>
+          <form th:action="'/vehicleVote/' + ${vehicle.getSubmissionID()} + '/'">
+          <button type="submit">vote on vehicle</button>
+            </form>
+        </div>
       </div>
     </div>
   </div>

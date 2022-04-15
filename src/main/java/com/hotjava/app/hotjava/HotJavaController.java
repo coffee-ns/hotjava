@@ -146,7 +146,28 @@ public class HotJavaController {
      * @return vote
      */
     @RequestMapping("/vote")
-    public String vote() { return "vote"; }
+    public String vote()
+    {
+        return "vote";
+    }
+
+    /**
+     * Handle the /vehiceleVote endpoint
+     * @return vote
+     */
+    @RequestMapping("/vehicleVote/{vehicleId}/")
+    public ModelAndView vote(@PathVariable("vehicleId") int vehicleId) {
+        ModelAndView mv = new ModelAndView();
+        try {
+            Vehicle veh = vehicleService.fetchById(vehicleId);
+            mv.addObject("vehicle", veh);
+        } catch (Exception e) {
+            log.error("Failed to navigate to vote screen");
+            mv.setViewName("error");
+            return mv;
+        }
+        mv.setViewName("vote");
+        return mv; }
 
     /**
      * Handles the /vehicleUpload endpoint

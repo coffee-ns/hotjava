@@ -2,6 +2,7 @@ package com.hotjava.app.hotjava.dao;
 
 import com.hotjava.app.hotjava.dto.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
@@ -17,9 +18,15 @@ public class VehicleSQLDAO implements IVehicleDAO{
     @Autowired
     VehicleRepository vehicleRepository;
 
+    @Autowired
+    CacheManager cacheManager;
+
+
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-        return vehicleRepository.save(vehicle);
+        Vehicle veh = vehicleRepository.save(vehicle);
+        cacheManager.getCache("vehicles").clear();
+        return veh;
     }
 
     @Override

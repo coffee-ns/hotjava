@@ -3,6 +3,7 @@ package com.hotjava.app.hotjava;
 import com.hotjava.app.hotjava.dto.Photo;
 import com.hotjava.app.hotjava.dto.Vehicle;
 import com.hotjava.app.hotjava.service.IVehicleService;
+import org.hibernate.query.criteria.internal.predicate.IsEmptyPredicate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -110,12 +111,20 @@ public class HotJavaController {
         try {
             List<Vehicle> vehicleList = vehicleService.fetchAll();
             mv.addObject("vehicles", vehicleList);
+            mv.addObject("vehicleSearchFilter",new Vehicle());
             log.info("vehicles retrieved");
+            if(vehicleList.size() < 1){
+                List<String> badValidations = new ArrayList<String>() ;
+                badValidations.add("you have no vehicles to display");
+                badValidations.add("Trying adding some vehicles on the Add your vehicle screen ");
+                mv.addObject("badValidations",badValidations);
+            }
         } catch (Exception e) {
             log.error("Failed to retrieve vehicles");
             mv.setViewName("error");
             return mv;
         }
+
         mv.setViewName("searchVehicle");
         return mv; }
 
@@ -140,19 +149,72 @@ public class HotJavaController {
      return mv;
     }
 
+    /**
+     * Handle the /searchVehicle endpoint
+     * @return searchVehicle
+     */
+    @GetMapping("/filteredSearch")
+    public ModelAndView filteredSearch(@ModelAttribute Vehicle vehicleSearchFilter ) {
+        ModelAndView mv = new ModelAndView();
+        try {
+            var filter = vehicleSearchFilter;
+            List<Vehicle> filteredList = vehicleService.fetchAll();
+            if(filter.getYear() != null && !filter.getYear().isEmpty()){
+                filteredList = filteredList.stream().filter(vehicle -> vehicle.getYear().equals(filter.getYear()) ).toList();
+            }
+            if(filter.getMake() != null && !filter.getMake().isEmpty()){
+                filteredList = filteredList.stream().filter(vehicle -> vehicle.getMake().contains(filter.getMake())).toList();
+            }
+            if(filter.getOwnerName() != null && !filter.getOwnerName().isEmpty()){
+                filteredList = filteredList.stream().filter(vehicle -> vehicle.getOwnerName().contains(filter.getOwnerName())).toList();
+            }
+            if(filter.getModel() != null && !filter.getModel().isEmpty()){
+                filteredList = filteredList.stream().filter(vehicle -> vehicle.getModel().contains(filter.getModel())).toList();
+            }
+            if(filter.getDescription() != null && !filter.getDescription().isEmpty()){
+                filteredList = filteredList.stream().filter(vehicle -> vehicle.getDescription().contains(filter.getDescription())).toList();
+            }
+            if(filter.getScore() != 0){
+                filteredList = filteredList.stream().filter(vehicle -> vehicle.getScore() >= filter.getScore()).toList();
+            }
+            mv.addObject("vehicles", filteredList);
+            mv.addObject("vehicleSearchFilter", filter);
+            List<String> goodValidations = new ArrayList<String>() ;
+            goodValidations.add("Filtered Search Success");
+            mv.addObject("goodValidations",goodValidations);
+            if(filteredList.size() < 1){
+                List<String> badValidations = new ArrayList<String>() ;
+                badValidations.add("No Vehicles match this filtered search");
+                badValidations.add("Adjust filter values or Select show all vehicles button see your vehicles ");
+                mv.addObject("badValidations",badValidations);
+            }
+        } catch (Exception e) {
+            log.error("Failed filtered search" );
+            mv.setViewName("error");
+            return mv;
+        }
+        mv.setViewName("searchVehicle");
+        return mv;
+    }
+
 
     /**
      * Handle the /vote endpoint
      * @return vote
      */
     @RequestMapping("/vote")
-    public String vote()
+    public ModelAndView vote()
     {
-        return "vote";
+        ModelAndView mv = new ModelAndView();
+        List<String> badValidations = new ArrayList<String>() ;
+        badValidations.add("to vote on a vehicle, access it from the search page");
+        mv.addObject("badValidations",badValidations);
+        mv.setViewName("index");
+        return mv;
     }
 
     /**
-     * Handle the /vehiceleVote endpoint
+     * Handle the /vehicleVote endpoint
      * @return vote
      */
     @RequestMapping("/vehicleVote/{vehicleId}/")
@@ -167,7 +229,8 @@ public class HotJavaController {
             return mv;
         }
         mv.setViewName("vote");
-        return mv; }
+        return mv;
+    }
 
     /**
      * Handles the /vehicleUpload endpoint
@@ -193,13 +256,14 @@ public class HotJavaController {
     return returnValue;
     }
 
-    @PostMapping("/voteUpdate")
-    public ModelAndView vote(Vehicle vehicle, boolean upvote) {
+    @PostMapping("/voteUp/{vehicleId}/")
+    public ModelAndView voteUp(@PathVariable("vehicleId") int vehicleId) {
         ModelAndView mv = new ModelAndView();
-        log.debug("Entering vote endpoint");
     try {
-        vehicleService.updateVehicleScore(vehicle,upvote);
+         Vehicle vehicle = vehicleService.fetchById(vehicleId);
         log.info("Voted for Vehicle");
+       vehicle.setScore(vehicleService.updateVehicleScore(vehicle,true));
+       mv.addObject("vehicle",vehicle);
     } catch (Exception e) {
         log.error("Couldn't cast vote for vehicle... Message: " + e.getMessage(), e);
         mv.setViewName("error");
@@ -208,7 +272,34 @@ public class HotJavaController {
         List<String> goodValidations = new ArrayList<String>() ;
         goodValidations.add("Vehicle Score updated");
         mv.addObject("goodValidations",goodValidations);
+        mv.setViewName("vote");
+        return mv;
+    }
 
+    @PostMapping("/voteDown/{vehicleId}/")
+    public ModelAndView voteDown(@PathVariable("vehicleId") int vehicleId) {
+        ModelAndView mv = new ModelAndView();
+        try {
+            Vehicle vehicle = vehicleService.fetchById(vehicleId);
+            if(vehicle.getScore() < 1){
+                List<String> badValidations = new ArrayList<String>() ;
+                badValidations.add("cannot lower score below zero");
+                mv.addObject("badValidations",badValidations);
+                mv.addObject("vehicle",vehicle);
+                mv.setViewName("vote");
+                return mv;
+            }
+            log.info("Voted for Vehicle");
+            vehicle.setScore(vehicleService.updateVehicleScore(vehicle,false));
+            mv.addObject("vehicle",vehicle);
+        } catch (Exception e) {
+            log.error("Couldn't cast vote for vehicle... Message: " + e.getMessage(), e);
+            mv.setViewName("error");
+            return mv;
+        }
+        List<String> goodValidations = new ArrayList<String>() ;
+        goodValidations.add("Vehicle Score updated");
+        mv.addObject("goodValidations",goodValidations);
         mv.setViewName("vote");
         return mv;
     }

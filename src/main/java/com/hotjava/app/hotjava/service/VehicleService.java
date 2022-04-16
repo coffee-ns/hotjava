@@ -5,7 +5,9 @@ import com.hotjava.app.hotjava.dao.IVehicleDAO;
 import com.hotjava.app.hotjava.dto.Photo;
 import com.hotjava.app.hotjava.dto.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,6 +25,7 @@ public class VehicleService implements IVehicleService {
 
     @Autowired
     private IPhotoDAO photoDAO;
+
 
     public VehicleService() {
 
@@ -46,7 +49,7 @@ public class VehicleService implements IVehicleService {
 
     @Override
     public Vehicle save(Vehicle vehicle) throws Exception {
-        if(vehicleIsComplete(vehicle)) {
+       if(vehicleIsComplete(vehicle)) {
             return vehicleDAO.save(vehicle);
         }
         else{

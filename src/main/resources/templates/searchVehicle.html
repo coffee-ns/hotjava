@@ -23,30 +23,34 @@
 
 <body style="margin-bottom: 50px">
   <div class="container-fluid col-md-6">
-    <form>
+    <form action = "#" th:action="@{/filteredSearch}" th:object="${vehicleSearchFilter}">
       <label class="year" for="year">Year</label>
-      <input type="number" id="year" min="1800" max="2023" step="1"><br><br>
+      <input type="number" id="year" min="1800" max="2023" step="1" name="year" th:field="*{year}"><br><br>
 
       <label for="make">Make</label>
-      <input type="text" id="make"><br><br>
+      <input type="text" id="make" name="make" th:field="*{make}"><br><br>
 
       <label for="model">Model</label>
-      <input type="text" id="model"><br><br>
+      <input type="text" id="model" name="model" th:field="*{model}"><br><br>
 
       <label for="owner">Owner</label>
-      <input type="text" id="owner"><br><br>
+      <input type="text" id="owner"  name="model" th:field="*{ownerName}"><br><br>
 
       <div class="slideContainer">
-        <input type="range" min="1" max="100" value="1" class="slider" id="minRange">
+        <input type="range" min="0" max="100" value="1" class="slider" id="minRange"  name="model" th:field="*{score}">
         <p>Minimum Score: <span id="minScore"></span></p>
       </div>
 
       <script src="js/scripts.js"></script>
 
       <br><br>
-      <a class="btn btn-primary" href="#" role="button">Submit</a>
+      <button type="submit"> Execute Filtered Search</button>
     </form>
-
+    <div style="padding-top: 1rem">
+    <form action="/search">
+    <button > Show all Vehicles</button>
+    </form>
+      </div>
     <br>
 
     <p>

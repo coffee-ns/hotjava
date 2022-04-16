@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:float="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Hot Java</title>
@@ -27,9 +28,12 @@
         <img class="img-fluid mx-auto d-block h-25" src="img/nissan-z-nismo.jpg" alt="Nissan-Z-Nismo">
         <br>
         <span id="vehicle" style="font-size:30px;"><strong th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></strong></span>
-
-        <button style="float: right;" id="downVote" class="btn btn-danger"><i class="bi bi-arrow-down" ></i></button>
-        <button style="float: right;" id="upVote" class="btn btn-success"><i class="bi bi-arrow-up"></i></button>
+        <form action="#" th:action="'/voteDown/' + ${vehicle.getSubmissionID()} +'/'" method="post">
+        <button style="float: right;" type="submit" id="downVote" class="btn btn-danger" ><i class="bi bi-arrow-down"></i></button>
+        </form>
+        <form action="#" th:action="'/voteUp/' + ${vehicle.getSubmissionID()} + '/'" method="post">
+        <button style="float: right;" type="submit" id="upVote" class="btn btn-success"><i class="bi bi-arrow-up"></i></button>
+        </form>
         <span style="float: right; margin-right: 1em; margin-top: 0.5em; font-weight: bold;" id="vehicleScore" th:text="${vehicle.getScore()}"></span>
 
         <br><br>

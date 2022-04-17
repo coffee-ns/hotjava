@@ -23,22 +23,38 @@
 </div>
 
 <body>
-    <div th:object = "${vehicle}" class="container-fluid col-md-6" stlye="padding-top: 10px;">
-
-        <img class="img-fluid mx-auto d-block h-25" src="img/nissan-z-nismo.jpg" alt="Nissan-Z-Nismo">
-        <br>
-        <span id="vehicle" style="font-size:30px;"><strong th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></strong></span>
-        <form action="#" th:action="'/voteDown/' + ${vehicle.getSubmissionID()} +'/'" method="post">
-        <button style="float: right;" type="submit" id="downVote" class="btn btn-danger" ><i class="bi bi-arrow-down"></i></button>
-        </form>
-        <form action="#" th:action="'/voteUp/' + ${vehicle.getSubmissionID()} + '/'" method="post">
-        <button style="float: right;" type="submit" id="upVote" class="btn btn-success"><i class="bi bi-arrow-up"></i></button>
-        </form>
-        <span style="float: right; margin-right: 1em; margin-top: 0.5em; font-weight: bold;" id="vehicleScore" th:text="${vehicle.getScore()}"></span>
-
-        <br><br>
-        <span id="description" th:text="${vehicle.getDescription()}"></span>
-
+    <div th:object = "${vehicle}" class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-md-9 col-lg-7 col-xl-5">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-4">
+                        <div class="d-flex text-black">
+                            <div class="flex-shrink-0">
+                                <img th:src="@{${'/photos/' + vehicle.getPhotos().get(0).getFileName()}}" class="img-fluid" style="width: 180px; border-radius: 10px;">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-1" th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></h5>
+                                <p class="mb-2 pb-1" style="color: #2b2a2a;" th:text="${vehicle.getDescription()}"></p>
+                                <div class="d-flex justify-content-start rounded-3 p-2 mb-2" style="background-color: #efefef;">
+                                    <div>
+                                        <p class="small text-muted mb-1">Current Score</p>
+                                        <strong><p class="mb-0" th:text="${vehicle.getScore()}"></p></strong>
+                                    </div>
+                                </div>
+                                <div class="d-flex pt-1">
+                                    <form action="#" th:action="'/voteUp/' + ${vehicle.getSubmissionID()} + '/'" method="post">
+                                        <button type="submit" class="btn btn-success flex-grow-1"><i class="bi bi-arrow-up"></i></button>
+                                    </form>
+                                    <form action="#" th:action="'/voteDown/' + ${vehicle.getSubmissionID()} +'/'" method="post">
+                                        <button type="submit" class="btn btn-danger me-1 flex-grow-1"><i class="bi bi-arrow-down"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

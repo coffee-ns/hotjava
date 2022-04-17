@@ -21,68 +21,106 @@
 
 </div>
 
-<body style="margin-bottom: 50px">
-  <div class="container-fluid col-md-6">
-    <form action = "#" th:action="@{/filteredSearch}" th:object="${vehicleSearchFilter}">
-      <label class="year" for="year">Year</label>
-      <input type="number" id="year" min="1800" max="2023" step="1" name="year" th:field="*{year}"><br><br>
+<body>
+  <div class="mt-3">
+    <div class="container-fluid col-md-6">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-md-12 col-lg-12 col-xl-12">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-4">
 
-      <label for="make">Make</label>
-      <input type="text" id="make" name="make" th:field="*{make}"><br><br>
+              <form action = "#" th:action="@{/filteredSearch}" th:object="${vehicleSearchFilter}">
+                <div class="form-group">
 
-      <label for="model">Model</label>
-      <input type="text" id="model" name="model" th:field="*{model}"><br><br>
+                  <p>Search for Year, Make, and model to find a specific vehicle. Alternatively, search for a user directly.</p>
+                  <br />
+                  <p>All search fields can be used independently.</p>
 
-      <label for="owner">Owner</label>
-      <input type="text" id="owner"  name="model" th:field="*{ownerName}"><br><br>
+                  <div class="form-group row mt-3">
+                    <label for="year" class="col-sm-2 col-form-label">Year</label>
+                    <div class="col-sm-10">
+                      <input  class="form-control" type="number" name="year" id="year" min="1800" max="2023" step="1" th:field="*{year}">
+                    </div>
+                  </div>
 
-      <div class="slideContainer">
-        <input type="range" min="0" max="100" value="1" class="slider" id="minRange"  name="model" th:field="*{score}">
-        <p>Minimum Score: <span id="minScore"></span></p>
-      </div>
+                  <div class="form-group row mt-3">
+                    <label for="make" class="col-sm-2 col-form-label">Make</label>
+                    <div class="col-sm-10">
+                      <input  class="form-control" type="text" name="make" id="make" th:field="*{make}">
+                    </div>
+                  </div>
 
-      <script src="js/scripts.js"></script>
+                  <div class="form-group row mt-3">
+                    <label for="model" class="col-sm-2 col-form-label">Model</label>
+                    <div class="col-sm-10">
+                      <input  class="form-control" type="text" name="model" id="model" th:field="*{model}">
+                    </div>
+                  </div>
 
-      <br><br>
-      <button type="submit"> Execute Filtered Search</button>
-    </form>
-    <div style="padding-top: 1rem">
-    <form action="/search">
-    <button > Show all Vehicles</button>
-    </form>
-      </div>
-    <br>
+                  <div class="form-group row mt-3">
+                    <label for="model" class="col-sm-2 col-form-label">Model</label>
+                    <div class="col-sm-10">
+                      <input type="range" min="0" max="100" value="1" class="slider" id="minRange"  name="model" th:field="*{score}">
+                      <p>Minimum Score: <span id="minScore"></span></p>
 
-    <p>
-      Search for Year, Make, and model to find a specific vehicle. Alternatively, search for a user directly.
-    </p>
+                      <script src="js/scripts.js"></script>
+                    </div>
+                  </div>
 
-    <br>
+                  <button type="submit" class="btn btn-primary flex-grow-1"> Execute Filtered Search</button>
+                </div>
+              </form>
 
-    <p>
-      All search fields can be used independently.
-    </p>
-  </div>
-
-  <h3 style="text-align: center; align-self: center; font-weight: bold; padding-top: .5rem; border-top: darkred thin solid" class="card-header mb-1">Existing Vehicles</h3>
-  <div class="container">
-    <div th:each="vehicle : ${vehicles}" class="row">
-      <div class="card text-white bg-secondary mb-3 p-3 col">
-        <div class="card-header col" th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></div>
-        <div class="card-body">
-          <h5 class="card-title" th:text="'Score:' + ' ' + ${vehicle.getScore()}">Secondary card title</h5>
-          <p class="card-text" th:text="${vehicle.getDescription()}"></p>
-        </div>
-        <div>
-          <form th:action="'/vehicleVote/' + ${vehicle.getSubmissionID()} + '/'">
-          <button type="submit">vote on vehicle</button>
-            </form>
+              <div class="mt-3">
+                <form action="/search">
+                  <button class="btn btn-primary flex-grow-1"> Show all Vehicles</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-
+  <h3 style="text-align: center; align-self: center; font-weight: bold; padding-top: .5rem; border-top: darkred thin solid" class="card-header mb-1 mt-3">Search Results</h3>
+  <div class="container">
+    <div th:each="vehicle : ${vehicles}" class="row">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-md-12 col-lg-12 col-xl-12">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-4">
+                <div class="d-flex text-black">
+                  <div class="flex-shrink-0">
+                    <img th:src="@{${'/photos/' + vehicle.getPhotos().get(0).getFileName()}}" class="img-fluid" style="height: auto; width: 180px; border-radius: 10px;">
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <h5 class="mb-1" th:text="${vehicle.getYear() + ' ' + vehicle.getMake() + ' ' + vehicle.getModel()}"></h5>
+                    <div class="d-flex justify-content-start rounded-3 p-2 mb-2" style="background-color: #efefef;">
+                      <div>
+                        <p class="small text-muted mb-1">Score</p>
+                        <strong><p class="mb-0" th:text="${vehicle.getScore()}"></p></strong>
+                      </div>
+                      <div class="px-3">
+                        <p class="small text-muted mb-1">Description</p>
+                        <p class="mb-0" th:text="${vehicle.getDescription()}"></p>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <form th:action="'/vehicleVote/' + ${vehicle.getSubmissionID()} + '/'">
+                        <button type="submit" class="btn btn-primary flex-grow-1">Click to vote!</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 <div th:replace="fragments/footer :: footer" ></div>

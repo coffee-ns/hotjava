@@ -22,33 +22,62 @@
 </div>
 
 <body>
-    <div class="container-fluid col-md-6">
-        <form action="/saveVehicle" th:object="${vehicle}" enctype="multipart/form-data" method="post">
-               <input type="hidden" name="submissionID" id="submissionID" value="0" field="*{submissionID}">
-               <input type="hidden" name="ownerName" id="ownerName"  field="*{ownerName}">
+    <div class="mt-3">
+        <div class="container-fluid col-md-6">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-md-12 col-lg-12 col-xl-12">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-4">
+                            <form class="was-validated" action="/saveVehicle" th:object="${vehicle}" enctype="multipart/form-data" method="post">
+                                <div class="form-group">
 
-              <label for="year">Year</label>
-              <input type="number" name="year" id="year" min="1800" max="2023" step="1" required="required" field="*{year}"><br><br>
+                                    <input type="hidden" name="submissionID" id="submissionID" value="0" field="*{submissionID}">
+                                    <input type="hidden" name="ownerName" id="ownerName"  field="*{ownerName}">
 
-              <label for="make">Make</label>
-              <input type="text" name="make" id="make" required="required"  field="*{make}"><br><br>
+                                    <div class="form-group row mt-3">
+                                        <label for="year" class="col-sm-2 col-form-label">Year</label>
+                                        <div class="col-sm-10">
+                                            <input  class="form-control" type="number" name="year" id="year" min="1800" max="2023" step="1" required="required" field="*{year}">
+                                        </div>
+                                    </div>
 
-              <label for="model">Model</label>
-              <input type="text" name="model" id="model" required="required"  field="*{model}"><br><br>
+                                    <div class="form-group row mt-3">
+                                        <label for="make" class="col-sm-2 col-form-label">Make</label>
+                                        <div class="col-sm-10">
+                                            <input  class="form-control" type="text" name="make" id="make" required="required"  field="*{make}">
+                                        </div>
+                                    </div>
 
-              <label for="desc">Description</label><br>
-              <textarea rows="10" cols="100" name="description" id="desc" required="required"  field="*{description}"></textarea> <br><br>
+                                    <div class="form-group row mt-3">
+                                        <label for="model" class="col-sm-2 col-form-label">Model</label>
+                                        <div class="col-sm-10">
+                                            <input  class="form-control" type="text" name="model" id="model" required="required"  field="*{model}">
+                                        </div>
+                                    </div>
 
-              <input type="hidden" name="score" id="score" field="*{score}" value="1">
+                                    <div class="form-group mt-3">
+                                        <label for="desc">Description</label>
+                                        <textarea class="form-control" name="description" id="desc" rows="5" required="required"  field="*{description}"></textarea>
+                                    </div>
 
-              <!--<label for="photoInput">Add Photo</label>
-              <input type="button" id="photoInput" value="Browse" onclick="document.getElementById('file').click();" /> <br><br>
-              -->
-            <input type="file" name="imageFile" required="required"/>
-            <button class="btn btn-primary" name="add" type="submit" value="0">Submit</button>
+                                    <input type="hidden" name="score" id="score" field="*{score}" value="1">
 
-
-        </form>
+                                    <!--<label for="photoInput">Add Photo</label>
+                                    <input type="button" id="photoInput" value="Browse" onclick="document.getElementById('file').click();" /> <br><br>
+                                    -->
+                                    <div class="form-group mt-3">
+                                        <label for="photoInput">Please provide photo of your vehicle</label><br />
+                                        <input type="file" name="imageFile" required/>
+                                        <div class="invalid-feedback">Please select photo</div>
+                                        <button class="btn btn-primary" id="photoInput" name="add" type="submit" value="0">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

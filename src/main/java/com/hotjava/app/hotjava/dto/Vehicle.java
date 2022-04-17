@@ -16,6 +16,7 @@ class Vehicle implements Serializable {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int submissionID;
     private String ownerName;
+    @Column(length = 9999)
     private String description;
     private String year;
     private String make;

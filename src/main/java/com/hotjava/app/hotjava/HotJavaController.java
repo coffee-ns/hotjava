@@ -365,4 +365,20 @@ public class HotJavaController {
         }
     }
 
+    @GetMapping("/vehicleSubmissions")
+    public ModelAndView viewVehicles() {
+        ModelAndView mv = new ModelAndView();
+        try {
+            List<Vehicle> vehicleList = vehicleService.fetchAll();
+            mv.addObject("vehicles", vehicleList);
+            log.info("vehicles loaded");
+        } catch (Exception e) {
+            log.error("Failed to load vehicles. Message: " + e.getMessage(), e);
+            mv.setViewName("error");
+            return mv;
+        }
+        mv.setViewName("vehicleSubmissions");
+        return mv;
+    }
+
 }
